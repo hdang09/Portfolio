@@ -44,4 +44,4 @@ jobs:
             - name: Pull the latest image
               run: sudo docker pull hdang09/portfolio
             - name: Start Docker image
-              run: sudo docker run --name portfolio -d -p 3002:3002 hdang09/portfolio
+              run: sudo docker run --name portfolio -d -p 3002:3000 hdang09/portfolio
