@@ -8,6 +8,7 @@ import classNames from 'classnames/bind';
 import styles from './about-me.module.scss';
 import { useState } from 'react';
 
+// Type
 type SocialMedia = {
     name: string;
     icon: React.ReactNode;
@@ -15,18 +16,20 @@ type SocialMedia = {
     href: string;
 };
 
+// classnames
 const cn = classNames.bind(styles);
+
+// Constants
+const NAV_LIST: string[] = ['About', 'Techstacks', 'Social Media', 'Award'];
+const SOCIAL_MEDIA: SocialMedia[] = [
+    { name: 'Facebook', icon: <FaFacebookF />, classname: 'fb', href: 'https://www.facebook.com/hdang.09' },
+    { name: 'Instagram', icon: <FaInstagram />, classname: 'ins', href: 'https://www.instagram.com/h.dang09/' },
+    { name: 'LinkedIn', icon: <FaLinkedin />, classname: 'in', href: 'https://www.linkedin.com/in/hdang09/' },
+    { name: 'GitHub', icon: <FaGithub />, classname: 'git', href: 'https://github.com/hdang09' },
+];
 
 const AboutMe = () => {
     const [activeTab, setActiveTab] = useState<number>(1);
-
-    const NAV_LIST: string[] = ['About', 'Techstacks', 'Social Media', 'Award'];
-    const SOCIAL_MEDIA: SocialMedia[] = [
-        { name: 'Facebook', icon: <FaFacebookF />, classname: 'fb', href: 'https://github.com' },
-        { name: 'Instagram', icon: <FaInstagram />, classname: 'ins', href: 'https://github.com' },
-        { name: 'LinkedIn', icon: <FaLinkedin />, classname: 'in', href: 'https://github.com' },
-        { name: 'GitHub', icon: <FaGithub />, classname: 'git', href: 'https://github.com' },
-    ];
 
     return (
         <section id="about-me" className={cn('section')}>
@@ -46,7 +49,7 @@ const AboutMe = () => {
 
                 {/****** ABOUT ******/}
                 <div className={cn('tab', 'about', { active: activeTab === 1 })}>
-                    <div className={cn('col-6')}>
+                    <div className="col-6">
                         <div>
                             <Image width="1000" height="1000" src="/about/about-img.png" alt="About" />
                         </div>
@@ -68,7 +71,7 @@ const AboutMe = () => {
 
                 {/****** TECHSTACKS ******/}
                 <div className={cn('tab', { active: activeTab === 2 })}>
-                    <div className={cn('col-6')}>
+                    <div className="col-6">
                         <div className={cn('techstacks-item')}>
                             <Image
                                 className={cn('bg-img')}
@@ -99,7 +102,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={cn('col-6')}>
+                    <div className="col-6">
                         <div className={cn('techstacks-item')}>
                             <Image
                                 className={cn('bg-img')}
@@ -143,7 +146,7 @@ const AboutMe = () => {
 
                 {/****** AWARD ******/}
                 <div className={cn('tab', { active: activeTab === 4 })}>
-                    <div className={cn('col-6')}>
+                    <div className="col-6">
                         <Image
                             src="/award/certificate-1.jpg"
                             alt="Award"
@@ -160,7 +163,7 @@ const AboutMe = () => {
                         />
                     </div>
 
-                    <div className={cn('col-6')}>
+                    <div className="col-6">
                         <Image
                             src="/award/certificate-3.jpg"
                             alt="Award"

@@ -14,7 +14,7 @@
     margin: 0 auto;
 
     .heading {
-        font-size: 7rem;
+        font-size: 6rem;
         color: #fff;
         margin-bottom: 10px;
     }
@@ -41,18 +41,6 @@
     &.active {
         border-bottom-color: #fff;
     }
-}
-
-.col-6 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 25px;
-}
-
-.col-3 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
 }
 
 .tab {

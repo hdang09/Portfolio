@@ -1,17 +1,25 @@
-.sec {
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
     background: #003329;
-    padding: 100px;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 50px 0;
+}
 
-    h2 {
-        font-size: 3em;
+.container {
+    width: var(--max-width);
+    margin: 0 auto;
+
+    .heading {
+        font-size: 6rem;
         color: #fff;
         margin-bottom: 10px;
     }
 
-    p {
-        font-size: 1em;
-        color: #fff;
-        font-weight: 300;
+    .description {
+        font-size: 2rem;
     }
 }
