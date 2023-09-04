@@ -47,20 +47,20 @@ const Parallax = () => {
 
     return (
         <section className={cn('parallax')}>
-            <Image src="/hill1.png" alt="hill1" id="hill1" width={2000} height={2000} ref={hill1Ref} />
-            <Image src="/hill2.png" alt="hill2" id="hill2" width={2000} height={2000} />
-            <Image src="/hill3.png" alt="hill3" id="hill3" width={2000} height={2000} />
-            <Image src="/hill4.png" alt="hill4" id="hill4" width={2000} height={2000} ref={hill4Ref} />
-            <Image src="/hill5.png" alt="hill5" id="hill5" width={2000} height={2000} ref={hill5Ref} />
-            <Image src="/tree.png" alt="teee" id="tree" width={2000} height={2000} ref={leafRef} />
-            <Image src="/leaf.png" alt="teee" id="leaf" width={2000} height={2000} ref={leafRef} />
+            <Image src="/parallax/hill1.png" alt="hill1" id="hill1" width={2000} height={2000} ref={hill1Ref} />
+            <Image src="/parallax/hill2.png" alt="hill2" id="hill2" width={2000} height={2000} />
+            <Image src="/parallax/hill3.png" alt="hill3" id="hill3" width={2000} height={2000} />
+            <Image src="/parallax/hill4.png" alt="hill4" id="hill4" width={2000} height={2000} ref={hill4Ref} />
+            <Image src="/parallax/hill5.png" alt="hill5" id="hill5" width={2000} height={2000} ref={hill5Ref} />
+            <Image src="/parallax/tree.png" alt="teee" id="tree" width={2000} height={2000} ref={leafRef} />
+            <Image src="/parallax/leaf.png" alt="teee" id="leaf" width={2000} height={2000} ref={leafRef} />
 
             <div ref={textRef} className={cn('text')}>
                 <h2 className={cn('heading')}>Tran Hai Dang</h2>
                 <h3 className={cn('subheading')}>Fullstack Developer, Designer</h3>
             </div>
 
-            <Image src="/plant.png" alt="plant" id="plant" width={2000} height={2000} ref={plantRef} />
+            <Image src="/parallax/plant.png" alt="plant" id="plant" width={2000} height={2000} ref={plantRef} />
         </section>
     );
 };
