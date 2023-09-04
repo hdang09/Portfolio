@@ -20,7 +20,7 @@ const Parallax = () => {
         const handleScroll = () => {
             let value = window.scrollY;
 
-            if (textRef.current) {
+            if (textRef.current && value < 1024) {
                 textRef.current.style.marginTop = value * 2.5 + 'px';
             }
             if (leafRef.current) {

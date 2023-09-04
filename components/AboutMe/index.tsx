@@ -136,10 +136,10 @@ const AboutMe = () => {
                 <div className={cn('tab', { active: activeTab === 3 })}>
                     <div className={cn('col-3')}>
                         {SOCIAL_MEDIA.map((item) => (
-                            <Link href={item.href} key={item.name} className={cn('sm-group')}>
+                            <a href={item.href} key={item.name} className={cn('sm-group')}>
                                 <div className={cn('icon', item.classname)}>{item.icon}</div>
                                 <span className={cn('name')}>{item.name}</span>
-                            </Link>
+                            </a>
                         ))}
                     </div>
                 </div>
