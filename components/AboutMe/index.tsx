@@ -1,14 +1,18 @@
 'use client';
 
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import classNames from 'classnames/bind';
 import styles from './about-me.module.scss';
 import { useState } from 'react';
 
 type SocialMedia = {
     name: string;
-    icon: string;
-    color: string;
+    icon: React.ReactNode;
+    classname: string;
+    href: string;
 };
 
 const cn = classNames.bind(styles);
@@ -18,10 +22,10 @@ const AboutMe = () => {
 
     const NAV_LIST: string[] = ['About', 'Techstacks', 'Social Media', 'Award'];
     const SOCIAL_MEDIA: SocialMedia[] = [
-        { name: 'Facebook', icon: 'icon', color: 'color' },
-        { name: 'Instagram', icon: 'icon', color: 'color' },
-        { name: 'LinkedIn', icon: 'icon', color: 'color' },
-        { name: 'GitHub', icon: 'icon', color: 'color' },
+        { name: 'Facebook', icon: <FaFacebookF />, classname: 'fb', href: 'https://github.com' },
+        { name: 'Instagram', icon: <FaInstagram />, classname: 'ins', href: 'https://github.com' },
+        { name: 'LinkedIn', icon: <FaLinkedin />, classname: 'in', href: 'https://github.com' },
+        { name: 'GitHub', icon: <FaGithub />, classname: 'git', href: 'https://github.com' },
     ];
 
     return (
@@ -55,7 +59,9 @@ const AboutMe = () => {
                                 keen eye for detail, creativity, and technical expertise allows me to create seamless,
                                 responsive interfaces across different devices and platforms.
                             </p>
-                            <button className="button">Lets Talk</button>
+                            <Link href="#contact" className="button">
+                                Lets Talk
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -63,73 +69,61 @@ const AboutMe = () => {
                 {/****** TECHSTACKS ******/}
                 <div className={cn('tab', { active: activeTab === 2 })}>
                     <div className={cn('col-6')}>
-                        <div className={cn('services-item')}>
-                            <div
-                                // style="background: url(./img/container/services/items/item-4.png) no-repeat center / contain;"
-                                className="services-item__img-bg"
-                            >
-                                <div
-                                    // style="background: url(./img/container/services/icons/004-employee.png) no-repeat center / contain;"
-                                    className="services-item__img-icon"
-                                ></div>
-                            </div>
-                            <div className="services-item__body">
-                                <h1 className="services-item__body-title">Front-end</h1>
-                                <div className="services-item__body--text">
+                        <div className={cn('techstacks-item')}>
+                            <Image
+                                className={cn('bg-img')}
+                                src="/services/items/item-1.png"
+                                alt="Item"
+                                width={200}
+                                height={200}
+                            />
+                            <div className={cn('techstacks-text')}>
+                                <h1 className={cn('title')}>Front-end</h1>
+                                <p>
                                     HTML, CSS, ReactJS, ViteJS, NextJS, SASS, Tailwind CSS, Bootstrap, Redux, ANT
                                     Design, Styled Components.
-                                </div>
+                                </p>
                             </div>
                         </div>
-                        <div className={cn('services-item')}>
-                            <div
-                                // style="background: url(./img/container/services/items/item-1.png) no-repeat center / contain;"
-                                className="services-item__img-bg"
-                            >
-                                <div
-                                    // style="background: url(./img/container/services/icons/001-lightbulb.png) no-repeat center / contain;"
-                                    className="services-item__img-icon"
-                                ></div>
-                            </div>
-                            <div className="services-item__body">
-                                <h1 className="services-item__body-title">Back-end</h1>
-                                <div className="services-item__body--text">
-                                    Spring Boot, NodeJS, ExpressJS, SQL Server, MySQL, MongoDB.
-                                </div>
+                        <div className={cn('techstacks-item')}>
+                            <Image
+                                className={cn('bg-img')}
+                                src="/services/items/item-2.png"
+                                alt="Item"
+                                width={200}
+                                height={200}
+                            />
+                            <div className={cn('techstacks-text')}>
+                                <h1 className={cn('title')}>Back-end</h1>
+                                <div>Spring Boot, NodeJS, ExpressJS, SQL Server, MySQL, MongoDB.</div>
                             </div>
                         </div>
                     </div>
                     <div className={cn('col-6')}>
-                        <div className={cn('services-item')}>
-                            <div
-                                // style="background: url(./img/container/services/items/item-3.png) no-repeat center / contain;"
-                                className="services-item__img-bg"
-                            >
-                                <div
-                                    // style="background: url(./img/container/services/icons/003-visualization.png) no-repeat center / contain;"
-                                    className="services-item__img-icon"
-                                ></div>
-                            </div>
-                            <div className="services-item__body">
-                                <h1 className="services-item__body-title">Programming Languages</h1>
-                                <div className="services-item__body--text">C, Java, JavaScript, TypeScript.</div>
+                        <div className={cn('techstacks-item')}>
+                            <Image
+                                className={cn('bg-img')}
+                                src="/services/items/item-3.png"
+                                alt="Item"
+                                width={200}
+                                height={200}
+                            />
+                            <div className={cn('techstacks-text')}>
+                                <h1 className={cn('title')}>Programming Languages</h1>
+                                <p>C, Java, JavaScript, TypeScript.</p>
                             </div>
                         </div>
-                        <div className={cn('services-item')}>
-                            <div
-                                // style="background: url(./img/container/services/items/item-2.png) no-repeat center / contain;"
-                                className="services-item__img-bg"
-                            >
-                                <div
-                                    // style="background: url(./img/container/services/icons/002-edit-file.png) no-repeat center / contain;"
-                                    className="services-item__img-icon"
-                                ></div>
-                            </div>
-                            <div className="services-item__body">
-                                <h1 className="services-item__body-title">DevOps</h1>
-                                <div className="services-item__body--text">
-                                    Linux, Docker, GitHub Actions, Lightsail.
-                                </div>
+                        <div className={cn('techstacks-item')}>
+                            <Image
+                                className={cn('bg-img')}
+                                src="/services/items/item-4.png"
+                                alt="Item"
+                                width={200}
+                                height={200}
+                            />
+                            <div className={cn('techstacks-text')}>
+                                <h1 className={cn('title')}>DevOps</h1>
+                                <p>Linux, Docker, GitHub Actions, Lightsail.</p>
                             </div>
                         </div>
                     </div>
@@ -139,68 +133,48 @@ const AboutMe = () => {
                 <div className={cn('tab', { active: activeTab === 3 })}>
                     <div className={cn('col-3')}>
                         {SOCIAL_MEDIA.map((item) => (
-                            <div key={item.name} className={cn('sm-group')}>
-                                <div className={cn('icon')}>{item.icon}</div>
+                            <Link href={item.href} key={item.name} className={cn('sm-group')}>
+                                <div className={cn('icon', item.classname)}>{item.icon}</div>
                                 <span className={cn('name')}>{item.name}</span>
-                            </div>
+                            </Link>
                         ))}
-                        <div className="col l-4 m-6 c-12 flexible">
-                            {/* <button style="border-color: #3b5998;" className="btn-l social--fb">
-                <a style="color: #3b5998;" className="social--fb-link" href="#">
-                    <i className="social--fb-link-icon fab fa-facebook-f"></i>
-                </a>
-            </button> */}
-                            <span className="section-4__title">Facebook</span>
-                        </div>
-
-                        <div className="col l-4 m-6 c-12 flexible">
-                            {/* <button style="border-color: #ff8e40;" className="btn-l social--ins">
-                <a className="social--ins-link" href="#">
-                    <i className="social--ins-link-icon fab fa-instagram"></i>
-                </a>
-            </button> */}
-                            <span className="section-4__title">Instagram</span>
-                        </div>
-
-                        <div className="col l-4 m-6 c-12 flexible">
-                            {/* <button style="border-color: #ea4c89;" className="btn-l social--dribble">
-                <a style="color: #ea4c89;" className="social--dribble-link" href="#">
-                    <i className="social--dribble-link-icon fas fa-basketball-ball"></i>
-                </a>
-            </button> */}
-                            <span className="section-4__title">Dribble</span>
-                        </div>
-
-                        <div className="col l-4 m-6 c-12 flexible">
-                            {/* <button style="border-color: #007aaa;" className="btn-l social--li">
-                <a style="color: #007aaa;" className="social--li-link" href="#">
-                    <i className="social--li-link-icon fab fa-linkedin-in"></i>
-                </a>
-            </button> */}
-                            <span className="section-4__title">Linkedin</span>
-                        </div>
                     </div>
                 </div>
 
                 {/****** AWARD ******/}
                 <div className={cn('tab', { active: activeTab === 4 })}>
                     <div className={cn('col-6')}>
-                        <div>
-                            {/* <img src="./img/container/award/certificate-1.jpg" alt="" className="section-img"> */}
-                        </div>
-
-                        <div>
-                            {/* <img src="./img/container/award/certificate-2.jpg" alt="" className="section-img"> */}
-                        </div>
+                        <Image
+                            src="/award/certificate-1.jpg"
+                            alt="Award"
+                            width={500}
+                            height={500}
+                            className={cn('award-img')}
+                        />
+                        <Image
+                            src="/award/certificate-2.jpg"
+                            alt="Award"
+                            width={500}
+                            height={500}
+                            className={cn('award-img')}
+                        />
                     </div>
 
                     <div className={cn('col-6')}>
-                        <div>
-                            {/* <img src="./img/container/award/certificate-3.jpg" alt="" className="section-img"> */}
-                        </div>
-                        <div>
-                            {/* <img src="./img/container/award/certificate-4.jpg" alt="" className="section-img"> */}
-                        </div>
+                        <Image
+                            src="/award/certificate-3.jpg"
+                            alt="Award"
+                            width={500}
+                            height={500}
+                            className={cn('award-img')}
+                        />
+                        <Image
+                            src="/award/certificate-4.jpg"
+                            alt="Award"
+                            width={500}
+                            height={500}
+                            className={cn('award-img')}
+                        />
                     </div>
                 </div>
             </div>

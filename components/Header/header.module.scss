@@ -1,14 +1,15 @@
 .logo {
-    font-size: 2em;
-    color: #359381;
+    font-size: 4rem;
+    color: var(--primary-color);
     pointer-events: none;
     margin-right: 250px;
 }
 
 .navigation {
     a {
+        font-size: 1.8rem;
         text-decoration: none;
-        color: #359381;
+        color: var(--primary-color);
         padding: 6px 15px;
         border-radius: 20px;
         margin: 0 10px;
@@ -17,7 +18,7 @@
 
     a:hover,
     a.active {
-        background: #359381;
+        background: var(--primary-color);
         color: #fff;
     }
 }
