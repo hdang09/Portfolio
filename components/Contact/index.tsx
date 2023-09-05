@@ -17,13 +17,24 @@ type Card = {
     title: string;
     icon: React.ReactNode;
     text: string;
+    href: string;
 };
 
 // Constants
 const CARDS: Card[] = [
-    { title: 'District 9, HCM City', icon: <IoEarthOutline />, text: 'Official Address' },
-    { title: 'contact@hdang09.site', icon: <AiOutlineMail />, text: 'Official Mail' },
-    { title: '0866 914 464', icon: <AiOutlinePhone />, text: 'Official Phone' },
+    {
+        title: 'District 9, HCM City',
+        icon: <IoEarthOutline />,
+        text: 'Official Address',
+        href: 'https://maps.google.com/...',
+    },
+    {
+        title: 'contact@hdang09.site',
+        icon: <AiOutlineMail />,
+        text: 'Official Mail',
+        href: 'mailto:contact@hdang09.site',
+    },
+    { title: '0866 914 464', icon: <AiOutlinePhone />, text: 'Official Phone', href: 'tel:0866914464' },
 ];
 
 const Contact = () => {
@@ -85,7 +96,9 @@ const Contact = () => {
                     <div>
                         {CARDS.map((card) => (
                             <div className={cn('card')} key={card.title}>
-                                <h2 className={cn('title')}>{card.title}</h2>
+                                <a href={card.href} className={cn('title')}>
+                                    {card.title}
+                                </a>
                                 <div className={cn('info')}>
                                     <div className={cn('icon')}>{card.icon}</div>
                                     <span className={cn('text')}>{card.text}</span>

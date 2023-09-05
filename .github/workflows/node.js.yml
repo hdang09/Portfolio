@@ -17,10 +17,8 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v3
 
-            # - name: Use Node.js environment
-            #   uses: actions/setup-node@v3
-            #   with:
-            #       node-version: 16
+            - name: Add .env file
+              run: echo "${{ secrets.ENVIROMENT_VARIABLES }}" >> .env
 
             - name: Build & push Dockerfile image
               uses: mr-smithers-excellent/docker-build-push@v6
