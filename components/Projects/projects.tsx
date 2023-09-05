@@ -8,7 +8,7 @@ import styles from './projects.module.scss';
 const cn = classNames.bind(styles);
 
 const Tech = {
-    Spring: <SiSpring size={40} marginRight={10} color="green" />,
+    Spring: <SiSpring size={40} color="green" />,
     NextJS: <SiNextdotjs size={40} color="black" />,
     Styledcomponents: <SiStyledcomponents size={40} />,
     SaaS: <FaSass size={40} />,
