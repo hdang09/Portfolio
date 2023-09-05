@@ -1,5 +1,6 @@
 FROM node
 WORKDIR /app
+COPY prisma ./prisma/
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
