@@ -22,6 +22,13 @@ type Project = {
     techstacks: any[];
 };
 
+// const getProjects = async () => {
+//     const res = await fetch(`https://...`);
+//     const projects = await res.json();
+
+//     return projects;
+// };
+
 const Projects = () => {
     const PROJECTS: Project[] = [
         {

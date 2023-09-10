@@ -27,11 +27,14 @@ model Project {
   desc       String
   imgUrl     String
   url        String
-  // techStacks Tech[]
+  techStacks Tech[]
 }
 
-// model Tech {
-//   id        String @id @default(uuid())
-//   name      String
-//   value     String
-// }
+model Tech {
+  id        String @id @default(uuid())
+  name      String
+  value     String
+  projects    Project[]
+}
+
+

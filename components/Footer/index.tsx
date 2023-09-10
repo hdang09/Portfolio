@@ -31,7 +31,7 @@ const Footer = () => {
         },
     ];
 
-    const TECHSTACKS = ['NextJS', 'TypeScript', 'Prisma', 'MySQL', 'Docker'];
+    const TECHSTACKS = ['NextJS 13', 'TypeScript', 'Prisma', 'MySQL', 'Docker'];
 
     return (
         <footer className={cn('section')}>

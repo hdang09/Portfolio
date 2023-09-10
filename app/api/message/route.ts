@@ -31,7 +31,19 @@ export async function POST(req: Request) {
             data: { firstName, lastName, email, subject, message },
         });
 
+        console.log('New message: ', newMessage);
+
         return NextResponse.json(newMessage);
+    } catch (error) {
+        throw new NextResponse('Internal error', { status: 500 });
+    }
+}
+
+export async function GET() {
+    try {
+        const allMessage = await prismaDb.message.findMany();
+
+        return NextResponse.json(allMessage);
     } catch (error) {
         throw new NextResponse('Internal error', { status: 500 });
     }
