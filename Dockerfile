@@ -1,8 +1,8 @@
 FROM node
 WORKDIR /app
 COPY prisma ./prisma/
-COPY package.json yarn.lock ./
-RUN yarn install
+COPY package*.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn build
 EXPOSE 3000

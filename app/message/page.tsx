@@ -1,10 +1,10 @@
 import prismaDb from '@/prisma/prismaDb';
 
-// const getMessages = async () => {
-//     const res = await axios.get('http://localhost:3000/api/message');
+const getMessages = async () => {
+    const messages = await prismaDb.message.findMany();
 
-//     return res.data;
-// };
+    return messages;
+};
 
 type MessageType = {
     id: string;
@@ -17,7 +17,7 @@ type MessageType = {
 };
 
 const Message = async () => {
-    const messages: MessageType[] = await prismaDb.message.findMany();
+    const messages: MessageType[] = await getMessages();
 
     return (
         <table border={1}>
