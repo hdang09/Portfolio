@@ -1,11 +1,10 @@
-const getMessages = async () => {
-    const res = await fetch('http://localhost:3000/api/message');
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
-    }
+import prismaDb from '@/prisma/prismaDb';
 
-    return res.json();
-};
+// const getMessages = async () => {
+//     const res = await axios.get('http://localhost:3000/api/message');
+
+//     return res.data;
+// };
 
 type MessageType = {
     id: string;
@@ -18,7 +17,7 @@ type MessageType = {
 };
 
 const Message = async () => {
-    const messages: MessageType[] = await getMessages();
+    const messages: MessageType[] = await prismaDb.message.findMany();
 
     return (
         <table border={1}>
