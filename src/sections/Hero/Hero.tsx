@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import toast from 'react-hot-toast';
 
 import Container from '@/components/Container';
 import FadeUp from '@/components/FadeUp';
@@ -35,11 +34,7 @@ const Hero = () => {
                 </div>
 
                 <div className={cn('content')}>
-                    <a
-                        // href="mailto:contact@hdang09.tech"
-                        className={cn('badge')}
-                        onClick={() => toast('Mail is not creating. Please wait...')}
-                    >
+                    <a href="mailto:contact@hdang09.tech" className={cn('badge')}>
                         <span>contact@hdang09.tech</span>
                     </a>
 

@@ -21,7 +21,6 @@ type Card = {
     icon: React.ReactNode;
     text: string;
     href: string;
-    onClick?: () => void;
 };
 
 // Constants
@@ -36,7 +35,7 @@ const CARDS: Card[] = [
         title: 'contact@hdang09.tech',
         icon: <AiOutlineMail />,
         text: 'Official Mail',
-        href: 'mailto:contact@hdang09.tech',
+        href: 'mailto:contact@hdang09.tech?cc=dangtranhai628@gmail.com',
     },
     {
         title: '0866 914 464',
@@ -167,7 +166,7 @@ const Contact = () => {
                 <div className={cn('cards')}>
                     {CARDS.map((card) => (
                         <HeadlessCard key={card.title}>
-                            <a href={card.href} className={cn('title')} onClick={card.onClick}>
+                            <a href={card.href} className={cn('title')}>
                                 {card.title}
                             </a>
 
