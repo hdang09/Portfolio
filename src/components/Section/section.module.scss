@@ -1,0 +1,33 @@
+@import '@/styles/media-queries.scss';
+@import '@/styles/variables.module.scss';
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    color: $white-color;
+    padding: 50px 0;
+    z-index: 10;
+
+    &.thin {
+        @include gt-lg {
+            padding: 0 250px;
+        }
+    }
+}
+
+.heading {
+    font-size: 6rem;
+    color: $white-color;
+    margin-bottom: 20px;
+
+    &.center {
+        text-align: center;
+    }
+
+    @include md {
+        font-size: 3.6rem;
+        text-align: center;
+    }
+}

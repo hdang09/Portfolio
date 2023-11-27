@@ -1,0 +1,153 @@
+@import '@/styles/media-queries.scss';
+@import '@/styles/variables.module.scss';
+
+.nav-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid $subheading-color;
+
+    @include md {
+        flex-direction: column;
+    }
+}
+
+.nav-item {
+    list-style: none;
+    font-size: 2rem;
+    padding: 24px 40px;
+    border-bottom: 2px solid transparent;
+    color: $text-color;
+
+    &:hover {
+        cursor: pointer;
+        border-bottom-color: $white-color;
+    }
+
+    &.active {
+        color: $white-color;
+        border-bottom-color: $white-color;
+    }
+
+    @include md {
+        font-size: 1.6rem;
+        padding: 20px;
+    }
+}
+
+.tab {
+    display: none;
+    margin-top: 60px;
+
+    &.active {
+        display: block;
+    }
+}
+
+.about {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .heading {
+        font-size: 5rem;
+        margin-bottom: 50px;
+    }
+
+    .desc {
+        margin-bottom: 50px;
+        font-weight: 400;
+        line-height: 3.2rem;
+        color: $text-color;
+    }
+
+    @include md {
+        .heading {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+// Techstacks
+.techstacks-item {
+    display: flex;
+    margin-bottom: 60px;
+    position: relative;
+
+    .bg-img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        margin-right: 24px;
+    }
+
+    .icon-img {
+        position: absolute;
+        top: 60px;
+        left: 71px;
+    }
+}
+
+.techstacks-text {
+    color: $subheading-color;
+
+    .title {
+        font-size: 4rem;
+        margin-bottom: 12px;
+        color: $text-color;
+    }
+}
+
+// Social media
+.sm-group {
+    display: flex;
+    align-items: center;
+    color: $white-color;
+
+    .icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+        font-size: 4rem;
+    }
+
+    .name {
+        margin-left: 25px;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .fb {
+        border-color: $facebook-color;
+        color: $facebook-color;
+    }
+
+    .ins {
+        border-color: $instagram-color;
+        color: $instagram-color;
+    }
+
+    .in {
+        border-color: $linkedin-color;
+        color: $linkedin-color;
+    }
+
+    .git {
+        border-color: $github-color;
+        color: $github-color;
+    }
+}
+
+// Award
+.award-img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 32px;
+    border-radius: 2px;
+}

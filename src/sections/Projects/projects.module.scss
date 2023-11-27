@@ -1,0 +1,331 @@
+@import '@/styles/media-queries.scss';
+@import '@/styles/variables.module.scss';
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 50px 0;
+}
+
+// PROJECTS
+.housemate-preview,
+.shorten-preview,
+.netclick-preview {
+    font-size: 1.2rem;
+    padding: 0 16px;
+}
+
+.housemate-header,
+.netclick-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 0 8px;
+        }
+    }
+}
+
+.housemate-main {
+    margin-top: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+        font-size: 2.4rem;
+        color: $subheading-color;
+
+        strong {
+            color: $white-color;
+        }
+    }
+
+    div {
+        margin: 12px 0;
+    }
+}
+
+.housemate-img {
+    background-color: $subheading-color;
+    display: block;
+    width: 360px;
+    height: 100px;
+    border-radius: 24px;
+    border: none;
+    object-fit: contain;
+}
+
+// Shorten URL
+
+.shorten-preview {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.shorten-nav {
+    display: flex;
+    height: 225px;
+    margin: auto 8px;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        flex-direction: column;
+        border-radius: 999px;
+        border: 1px solid $border-color;
+        padding: 8px 4px;
+        line-height: 1;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 999px;
+            width: 36px;
+            height: 36px;
+        }
+
+        li:first-child {
+            overflow: hidden;
+        }
+
+        li:first-child::after {
+            background: rgba(226, 232, 255, 0.04);
+            box-shadow: 0 0 20px rgba(226, 232, 255, 0.1215686275) inset;
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: inherit;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.shorten-main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.shorten-inputs {
+    margin: 8px 0;
+}
+
+.shorten-input {
+    background: transparent;
+    border: none;
+    border: 1px solid $border-color;
+    margin: 0 4px;
+    color: $text-color;
+    font-size: 1rem;
+    padding: 6px;
+    width: 47%;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $subheading-color;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: rgba(226, 232, 255, 0.2);
+    }
+}
+
+.shorten-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.shorten-card {
+    width: 100%;
+    border: 1px solid $border-color;
+    padding: 8px;
+    margin-bottom: 24px;
+    color: $subheading-color;
+    border-radius: 2px;
+
+    h4 {
+        color: $text-color;
+        margin-bottom: 6px;
+    }
+}
+
+.shorten-item {
+    width: inherit;
+    display: flex;
+    flex: 1;
+
+    & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 12px;
+    }
+}
+
+.shorten-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    p {
+        width: fit-content;
+        color: $subheading-color;
+        display: inline;
+        border-bottom: 1px solid rgba(226, 232, 255, 0.2);
+    }
+}
+
+.shorten-btns {
+    display: flex;
+    align-items: center;
+
+    span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: $subheading-color;
+        margin: 0 4px;
+        border-radius: 2px;
+    }
+}
+
+// IQ Challenge
+.iq-preview {
+    display: flex;
+}
+
+.iq-sidebar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iq-logo {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $text-color;
+    padding: 8px 0 4px 0;
+}
+
+.iq-time {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.iq-question-container {
+    display: flex;
+    margin-bottom: 8px;
+
+    span {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: $subheading-color;
+        margin-right: 8px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+}
+
+.iq-submit-btn {
+    margin-top: 8px;
+}
+
+.iq-main {
+    padding: 4px 12px;
+    flex: 1;
+}
+
+.iq-quetion-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+}
+
+.iq-question {
+    margin-right: 10px;
+
+    h5 {
+        color: $text-color;
+        font-size: 1rem;
+    }
+
+    p {
+        color: $subheading-color;
+        font-size: 1rem;
+        max-width: 200px;
+    }
+}
+
+.iq-answer-item:not(:last-child) {
+    width: inherit;
+    margin-bottom: 6px;
+}
+
+// NetClick
+.netclick-main {
+    display: flex;
+    align-items: center;
+    min-height: 225px;
+}
+
+.netclick-left {
+    p {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    h3 {
+        color: $subheading-color;
+        font-size: 1.8rem;
+
+        span {
+            color: $text-color;
+        }
+    }
+
+    div:last-child {
+        margin-top: 12px;
+    }
+}
+
+.netclick-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.netclick-img {
+    width: 150px;
+    height: 150px;
+    background-color: $subheading-color;
+    border-radius: 4px;
+}
