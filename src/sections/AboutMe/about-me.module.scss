@@ -84,10 +84,35 @@
     }
 
     .icon-img {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        top: 60px;
-        left: 71px;
+        left: 70px;
+        font-size: 5.6rem;
     }
+
+    @include md {
+        .bg-img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .icon-img {
+            width: 32px;
+            height: 32px;
+            left: 50px;
+            font-size: 3.2rem;
+        }
+    }
+}
+
+.techstacks-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .techstacks-text {
@@ -98,6 +123,16 @@
         margin-bottom: 12px;
         color: $text-color;
     }
+
+    @include md {
+        .title {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
 }
 
 // Social media
@@ -105,6 +140,7 @@
     display: flex;
     align-items: center;
     color: $white-color;
+    margin-bottom: 28px;
 
     .icon {
         width: 100px;

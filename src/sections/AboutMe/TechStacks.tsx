@@ -13,25 +13,25 @@ const TECH_STACKS = [
     {
         title: 'Front-end',
         desc: 'HTML, CSS, ReactJS, ViteJS, NextJS, SASS, Tailwind CSS, Bootstrap, Redux, ANT Design, Styled Components.',
-        icon: <CgWebsite size="56" color="#05051e" />,
+        icon: <CgWebsite color="#05051e" />,
         bgIcon: '/services/items/item-1.png',
     },
     {
         title: 'Back-end',
         desc: 'Spring Boot, NodeJS, ExpressJS, SQL Server, MySQL, MongoDB.',
-        icon: <FaCode size="56" color="#05051e" />,
+        icon: <FaCode color="#05051e" />,
         bgIcon: '/services/items/item-2.png',
     },
     {
         title: 'Programming Languages',
         desc: 'C, Java, JavaScript, TypeScript.',
-        icon: <FaJava size="56" color="#05051e" />,
+        icon: <FaJava color="#05051e" />,
         bgIcon: '/services/items/item-3.png',
     },
     {
         title: 'DevOps',
         desc: 'Linux, Docker, GitHub Actions, Lightsail.',
-        icon: <GiServerRack size="56" color="#05051e" />,
+        icon: <GiServerRack color="#05051e" />,
         bgIcon: '/services/items/item-4.png',
     },
 ];
@@ -42,7 +42,7 @@ const TechStacks = ({ active }: { active: boolean }) => {
             <div className="col-6">
                 {TECH_STACKS.slice(0, 2).map((item, index) => (
                     <div className={cn('techstacks-item')} key={index}>
-                        <div>
+                        <div className={cn('techstacks-img')}>
                             <img
                                 className={cn('bg-img')}
                                 src={item.bgIcon}
@@ -52,6 +52,7 @@ const TechStacks = ({ active }: { active: boolean }) => {
                             />
                             <div className={cn('icon-img')}>{item.icon}</div>
                         </div>
+
                         <div className={cn('techstacks-text')}>
                             <h1 className={cn('title')}>{item.title}</h1>
                             <p>{item.desc}</p>
@@ -62,7 +63,7 @@ const TechStacks = ({ active }: { active: boolean }) => {
             <div className="col-6">
                 {TECH_STACKS.slice(2, 4).map((item, index) => (
                     <div className={cn('techstacks-item')} key={index}>
-                        <div>
+                        <div className={cn('techstacks-img')}>
                             <img
                                 className={cn('bg-img')}
                                 src={item.bgIcon}
@@ -72,6 +73,7 @@ const TechStacks = ({ active }: { active: boolean }) => {
                             />
                             <div className={cn('icon-img')}>{item.icon}</div>
                         </div>
+
                         <div className={cn('techstacks-text')}>
                             <h1 className={cn('title')}>{item.title}</h1>
                             <p>{item.desc}</p>
