@@ -22,8 +22,8 @@ const Card = ({ icon, title, description, url, preview }: CardProps) => {
             />
 
             <div className={cn('card-heading')}>
-                <a href={url} target="_blank" className={cn('icon')}>
-                    {typeof icon === 'string' ? <img src={icon} /> : icon}
+                <a href={url} target="_blank" aria-label={title} className={cn('icon')}>
+                    {typeof icon === 'string' ? <img src={icon} alt={title} /> : icon}
                 </a>
                 <a href={url} target="_blank" className={cn('card-title')}>
                     {title}

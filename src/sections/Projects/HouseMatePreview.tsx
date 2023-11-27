@@ -32,7 +32,9 @@ const HouseMatePreview = () => {
     return (
         <div className={cn('housemate-preview')}>
             <header className={cn('housemate-header')}>
-                <a href={URL}>HouseMate</a>
+                <a href={URL} alt="HouseMate">
+                    HouseMate
+                </a>
 
                 <ul>
                     {NAV_LINKS.map((link) => (
@@ -54,12 +56,12 @@ const HouseMatePreview = () => {
             </header>
 
             <div className={cn('housemate-main')}>
-                <h4>
+                <h3>
                     <strong>Let's Make</strong> Your Apartment
-                </h4>
-                <h4>
+                </h3>
+                <h3>
                     More <strong>Convenient</strong>
-                </h4>
+                </h3>
 
                 <Button
                     onClick={() => {

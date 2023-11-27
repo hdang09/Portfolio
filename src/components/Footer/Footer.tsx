@@ -50,7 +50,9 @@ const Footer = () => {
                     <ul className={cn('social-media')}>
                         {SOCIAL_MEDIA.map((item) => (
                             <li className={cn('sm-item')} key={item.name}>
-                                <a href={item.url}>{item.icon}</a>
+                                <a href={item.url} aria-label={item.name}>
+                                    {item.icon}
+                                </a>
                             </li>
                         ))}
                     </ul>
