@@ -108,7 +108,7 @@ const Contact = () => {
                 <HeadlessCard>
                     <h2 className={cn('title')}>Get In Touch</h2>
 
-                    <form method="POST">
+                    <form method="POST" autoComplete="off">
                         <div className="col-6">
                             <input
                                 type="text"

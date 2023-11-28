@@ -40,7 +40,7 @@
     flex-direction: column;
     align-items: center;
 
-    h4 {
+    h3 {
         font-size: 2.4rem;
         color: $subheading-color;
 
@@ -162,7 +162,7 @@
     color: $subheading-color;
     border-radius: 2px;
 
-    h4 {
+    h3 {
         color: $text-color;
         margin-bottom: 6px;
     }
@@ -324,8 +324,8 @@
 }
 
 .netclick-img {
-    width: 150px;
-    height: 150px;
-    background-color: $subheading-color;
+    width: 175px;
+    height: 175px;
+    // background-color: $subheading-color;
     border-radius: 4px;
 }

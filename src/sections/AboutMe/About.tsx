@@ -23,8 +23,8 @@ const About = ({ active }: { active: boolean }) => {
 
                     <FadeUp delay={0.2}>
                         <p className={cn('desc')} style={{ height: 'inherit' }}>
-                            My name is <Strong>Hai Dang</Strong>. I am a fullstack designer and
-                            developer, currently studying Bachelor of Science and majoring in{' '}
+                            My name is <Strong>Hai Dang</Strong>. I am a full-stack developer and
+                            designer, currently studying Bachelor of Science and majoring in{' '}
                             <Strong>Software Engineering</Strong>. My keen eye for detail,
                             creativity, and technical expertise allows me to create seamless,
                             responsive interfaces across different devices and platforms.

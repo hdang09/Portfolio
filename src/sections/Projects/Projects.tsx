@@ -6,13 +6,13 @@ import { FaSass } from 'react-icons/fa';
 import { JSX } from 'preact/jsx-runtime';
 
 import Card from '@/components/Card';
+import Section from '@/components/Section';
 import Strong from '@/components/Strong';
 
 import HouseMatePreview from './HouseMatePreview';
 import ShortenURLPreview from './ShortenURLPreview';
 import IQChallengePreview from './IQChallengePreview';
 import NetClickPreview from './NetClickPreview';
-import Section from '@/components/Section';
 
 const Tech = {
     Spring: <SiSpring size={40} color="green" />,
@@ -52,15 +52,6 @@ const PROJECTS: Project[] = [
         icon: <IoIosLink />,
     },
     {
-        name: 'IQ Challenge',
-        desc: 'A quiz game for the orientation at FPT University HCM.',
-        imgUrl: '/award/certificate-1.jpg',
-        url: 'https://iq.hdang09.tech',
-        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
-        preview: <IQChallengePreview />,
-        icon: <AiOutlineBulb />,
-    },
-    {
         name: 'NetClick',
         desc: 'A movie web application',
         imgUrl: '/award/certificate-1.jpg',
@@ -68,6 +59,15 @@ const PROJECTS: Project[] = [
         techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
         preview: <NetClickPreview />,
         icon: <MdMovie />,
+    },
+    {
+        name: 'IQ Challenge',
+        desc: 'A quiz game for the orientation at FPT University HCM.',
+        imgUrl: '/award/certificate-1.jpg',
+        url: 'https://iq.hdang09.tech',
+        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
+        preview: <IQChallengePreview />,
+        icon: <AiOutlineBulb />,
     },
 ];
 

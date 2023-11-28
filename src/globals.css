@@ -1,6 +1,4 @@
 :root {
-    --primary-color: #359381;
-    --secondary-color: #bdede3;
     --white-color: #fff;
     --background-color: #05051e;
     --max-width: 1200px;
@@ -86,28 +84,30 @@ a {
 
 /* Selection */
 ::selection {
-    color: #fff;
-    background: rgba(147,130,255,.5);
-}
-
-a {
-    text-decoration: none;
-    /* color: #45ce7c; */
+    color: var(--white-color);
+    background: rgba(147, 130, 255, 0.5);
 }
 
 /* Custom CSS */
-
 img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
-/* Medium button */
+/* Remove autofill input */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:not(:placeholder-shown) {
+    background-color: transparent;
+}
+
+/* Button */
 button {
     min-width: 100px;
     border: 0;
-    color: #fff;
+    color: var(--white-color);
     cursor: pointer;
     font-weight: 500;
     border-radius: 8px;
@@ -124,10 +124,7 @@ button:hover {
     border: none;
 }
 
-strong {
-    color: var(--primary-color);
-}
-
+/* Grid */
 .col-6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,8 +137,8 @@ strong {
     grid-gap: 10px;
 
     @media only screen and (max-width: 768px) {
-            grid-template-columns: repeat(1, 1fr);
-      }
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .col-8-2 {
@@ -157,7 +154,10 @@ strong {
 }
 
 @media only screen and (max-width: 768px) {
-    .col-6, .col-3, .col-8-2, .col-7-5 {
+    .col-6,
+    .col-3,
+    .col-8-2,
+    .col-7-5 {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
     }

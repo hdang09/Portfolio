@@ -1,7 +1,8 @@
 import classNames from 'classnames/bind';
+import Button from '@/components/Button';
 import styles from './projects.module.scss';
-import Button from '../../components/Button'; // TODO: Replace .. with @
 
+// classnames
 const cn = classNames.bind(styles);
 
 const IQChallengePreview = () => {
@@ -18,7 +19,9 @@ const IQChallengePreview = () => {
     return (
         <div className={cn('iq-preview')}>
             <div className={cn('iq-sidebar')}>
-                <h4 className={cn('iq-logo')}>F-Code</h4>
+                <h3 className={cn('iq-logo')} onClick={navigatePage}>
+                    F-Code
+                </h3>
 
                 <div className={cn('iq-time')}>
                     <svg
@@ -71,13 +74,13 @@ const IQChallengePreview = () => {
 
                     <div>
                         <div className={cn('iq-answer-item')}>
-                            <Button>A. Answer number 1</Button>
+                            <Button onClick={navigatePage}>A. Answer number 1</Button>
                         </div>
                         <div className={cn('iq-answer-item')}>
-                            <Button>B. Answer number 2</Button>
+                            <Button onClick={navigatePage}>B. Answer number 2</Button>
                         </div>
                         <div className={cn('iq-answer-item')}>
-                            <Button>C. Answer number 3</Button>
+                            <Button onClick={navigatePage}>C. Answer number 3</Button>
                         </div>
                     </div>
                 </div>
@@ -94,13 +97,13 @@ const IQChallengePreview = () => {
 
                     <div className={cn('iq-answer')}>
                         <div className={cn('iq-answer-item')}>
-                            <Button>A. Answer number 1</Button>
+                            <Button onClick={navigatePage}>A. Answer number 1</Button>
                         </div>
                         <div className={cn('iq-answer-item')}>
-                            <Button>B. Answer number 2</Button>
+                            <Button onClick={navigatePage}>B. Answer number 2</Button>
                         </div>
                         <div className={cn('iq-answer-item')}>
-                            <Button>C. Answer number 3</Button>
+                            <Button onClick={navigatePage}>C. Answer number 3</Button>
                         </div>
                     </div>
                 </div>

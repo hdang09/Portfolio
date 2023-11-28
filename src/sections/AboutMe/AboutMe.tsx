@@ -32,7 +32,7 @@ const NAV_LIST = [
     },
     {
         id: 4,
-        name: 'Award',
+        name: 'Awards',
         component: Award,
     },
 ];

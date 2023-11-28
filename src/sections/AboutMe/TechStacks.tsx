@@ -18,7 +18,7 @@ const TECH_STACKS = [
     },
     {
         title: 'Back-end',
-        desc: 'Spring Boot, NodeJS, ExpressJS, SQL Server, MySQL, MongoDB.',
+        desc: 'JSP, Servlet, Spring MVC, JPA, Hibernate, Spring Boot, Spring Security, SQL Server, MySQL, MongoDB.',
         icon: <FaCode color="#05051e" />,
         bgIcon: '/services/items/item-2.png',
     },

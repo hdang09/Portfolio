@@ -1,11 +1,13 @@
 import classNames from 'classnames/bind';
+import Button from '@/components/Button';
 import styles from './projects.module.scss';
-import Button from '../../components/Button';
 
+// classnames
 const cn = classNames.bind(styles);
 
 const NetClickPreview = () => {
     const URL = 'https://netclick.hdang09.tech';
+
     const NAV_LINKS = [
         {
             id: 1,
@@ -60,7 +62,11 @@ const NetClickPreview = () => {
                 </div>
 
                 <div className={cn('netclick-right')}>
-                    <div className={cn('netclick-img')} />
+                    <img
+                        src="/project/netclick.png"
+                        alt="NetClick Hero"
+                        className={cn('netclick-img')}
+                    />
                 </div>
             </div>
         </div>

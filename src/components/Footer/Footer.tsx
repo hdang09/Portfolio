@@ -3,6 +3,7 @@ import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from 'react-icons/bi'
 
 import Strong from '@/components/Strong';
 import Container from '@/components/Container';
+
 import styles from './footer.module.scss';
 
 const cn = classNames.bind(styles);

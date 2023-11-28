@@ -1,11 +1,13 @@
 import classNames from 'classnames/bind';
-import styles from './projects.module.scss';
-import Button from '../../components/Button'; // TODO: Replace .. with @
-
 import { MdOutlineHome, MdOutlineLogout } from 'react-icons/md';
 import { IoIosLink, IoIosMoon } from 'react-icons/io';
 import { CiSettings } from 'react-icons/ci';
 
+import Button from '@/components/Button';
+
+import styles from './projects.module.scss';
+
+// classnames
 const cn = classNames.bind(styles);
 
 const ShortenURLPreview = () => {

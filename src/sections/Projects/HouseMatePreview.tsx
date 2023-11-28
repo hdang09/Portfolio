@@ -1,11 +1,13 @@
 import classNames from 'classnames/bind';
+import Button from '@/components/Button';
 import styles from './projects.module.scss';
-import Button from '../../components/Button';
 
+// classnames
 const cn = classNames.bind(styles);
 
 const HouseMatePreview = () => {
     const URL = 'https://housemate.site';
+
     const NAV_LINKS = [
         {
             id: 1,
