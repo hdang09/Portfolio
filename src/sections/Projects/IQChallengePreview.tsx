@@ -64,7 +64,7 @@ const IQChallengePreview = () => {
             <div className={cn('iq-main')}>
                 <div className={cn('iq-quetion-item')}>
                     <div className={cn('iq-question')}>
-                        <h5>Question 1</h5>
+                        <h4>Question 1</h4>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores
                             dolor reprehenderit tenetur corporis ex? Et molestias deserunt
@@ -87,7 +87,7 @@ const IQChallengePreview = () => {
 
                 <div className={cn('iq-quetion-item')}>
                     <div className={cn('iq-question')}>
-                        <h5>Question 2</h5>
+                        <h4>Question 2</h4>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores
                             dolor reprehenderit tenetur corporis ex? Et molestias deserunt
