@@ -22,27 +22,27 @@ const ShortenURLPreview = () => {
             <div className={cn('shorten-nav')}>
                 <ul>
                     <li>
-                        <a target="_blank" href={URL}>
+                        <a target="_blank" href={URL} aria-label="Home">
                             <MdOutlineHome size="12" />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href={URL}>
+                        <a target="_blank" href={URL} aria-label="LInks">
                             <IoIosLink size="12" />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href={URL}>
+                        <a target="_blank" href={URL} aria-label="Settings">
                             <CiSettings size="14" />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href={URL}>
+                        <a target="_blank" href={URL} aria-label="Theme">
                             <IoIosMoon size="12" />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href={URL}>
+                        <a target="_blank" href={URL} aria-label="Logout">
                             <MdOutlineLogout size="12" />
                         </a>
                     </li>
