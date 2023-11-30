@@ -1,10 +1,12 @@
+import classNames from 'classnames/bind';
 import { useEffect, useState } from 'preact/hooks';
 import { HiDownload } from 'react-icons/hi';
+
+import { RESUME_URL } from '@/config/constants';
 import Container from '@/components/Container';
-import classNames from 'classnames/bind';
+import Image from '@/components/Image';
 
 import styles from './header.module.scss';
-import { RESUME_URL } from '@/config/constants';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -42,7 +44,7 @@ const Header = () => {
                             <span className={cn('project-count')}>4</span>
                         </a>
                         <a href="#contact">Contact</a>
-                        <a className={cn('nav-btn-link')}>
+                        <a className={cn('nav-btn-link')} href="#">
                             <button
                                 className={cn('action-btn', 'nav-btn')}
                                 onClick={downloadResume}
@@ -59,8 +61,8 @@ const Header = () => {
                     </button>
                 </div>
 
-                <img
-                    src="https://www.dimension.dev/build/q-9f76d447.png"
+                <Image
+                    src="/components/stage-light.png"
                     alt="Stage light"
                     className={cn('stage-light')}
                 />

@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 
 import Container from '@/components/Container';
 import FadeUp from '@/components/FadeUp';
+import Image from '@/components/Image';
 
 import styles from './hero.module.scss';
 
@@ -20,13 +21,13 @@ const Hero = () => {
                     </div>
 
                     <div className={cn('lights')}>
-                        <img
-                            src="https://www.dimension.dev/build/q-37675410.png"
+                        <Image
+                            src="/components/light.png"
                             alt="Light"
                             className={cn('light', 'light-1')}
                         />
-                        <img
-                            src="https://www.dimension.dev/build/q-37675410.png"
+                        <Image
+                            src="/components/light.png"
                             alt="Light"
                             className={cn('light', 'light-2')}
                         />

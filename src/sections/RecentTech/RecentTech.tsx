@@ -1,7 +1,10 @@
 import classNames from 'classnames/bind';
-import styles from './recent-tech.module.scss';
+
 import { RECENT_TECH } from '@/config/constants';
 import FadeUp from '@/components/FadeUp';
+import Image from '@/components/Image';
+
+import styles from './recent-tech.module.scss';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -16,7 +19,7 @@ const RecentTech = () => {
             <div className={cn('list')}>
                 {RECENT_TECH.map((tech) => (
                     <a href={tech.url} target="_blank">
-                        <img
+                        <Image
                             src={`/recent-tech/${tech.image}`}
                             alt={tech.name}
                             className={cn('img')}

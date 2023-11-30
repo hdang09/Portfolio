@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
-import styles from './card.module.scss';
 import { JSX } from 'preact/compat';
+import Image from '@/components/Image';
+import styles from './card.module.scss';
 
 const cn = classNames.bind(styles);
 
@@ -15,11 +16,7 @@ interface CardProps {
 const Card = ({ icon, title, description, url, preview }: CardProps) => {
     return (
         <div className={cn('card')}>
-            <img
-                src="https://www.dimension.dev/build/q-574d3e36.png"
-                alt="Background dots"
-                className={cn('bg-dots')}
-            />
+            <Image src="/components/bg-dots.png" alt="Background dots" className={cn('bg-dots')} />
 
             <div className={cn('card-heading')}>
                 <a href={url} target="_blank" aria-label={title} className={cn('icon')}>

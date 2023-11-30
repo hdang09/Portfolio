@@ -1,9 +1,11 @@
 import classNames from 'classnames/bind';
 
-import styles from './about-me.module.scss';
 import Button from '@/components/Button';
 import Strong from '@/components/Strong';
 import FadeUp from '@/components/FadeUp';
+import Image from '@/components/Image';
+
+import styles from './about-me.module.scss';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -13,7 +15,7 @@ const About = ({ active }: { active: boolean }) => {
         <div className={cn('tab', 'about', { active })}>
             <div className="col-6">
                 <div>
-                    <img width="1000" height="1000" src="/about/about-img.png" alt="About" />
+                    <Image src="/about/about-img.png" alt="About" />
                 </div>
 
                 <div>

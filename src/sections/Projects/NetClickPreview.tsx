@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import Button from '@/components/Button';
 import styles from './projects.module.scss';
+import Image from '@/components/Image';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -62,7 +63,7 @@ const NetClickPreview = () => {
                 </div>
 
                 <div className={cn('netclick-right')}>
-                    <img
+                    <Image
                         src="/project/netclick.png"
                         alt="NetClick Hero"
                         className={cn('netclick-img')}
