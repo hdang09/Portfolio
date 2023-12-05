@@ -3,12 +3,12 @@
 
 .card {
     border-radius: 16px;
-    background: rgba(226, 232, 255, 0.02);
+    background: var(--card-background);
     padding: 6px;
     position: relative;
     width: 100%;
     isolation: isolate;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     margin-bottom: 24px;
 }
 
@@ -48,11 +48,11 @@
 .card-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: $text-color;
+    color: var(--text-color);
 }
 
 .description {
-    color: $subheading-color;
+    color: var(--subheading-color);
 }
 
 .card-box {
@@ -62,7 +62,7 @@
     overflow: hidden;
     position: relative;
     aspect-ratio: 2/1;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     padding: 6px 18px;
 
     &::after {
@@ -84,7 +84,7 @@
             radial-gradient(
                 120.05% 100% at 50% 0%,
                 rgba(226, 232, 255, 0) 33.78%,
-                $border-color 100%
+                var(--border-color) 100%
             ),
             rgba(226, 232, 255, 0.01);
     }
@@ -100,5 +100,21 @@
         &.headless {
             display: block;
         }
+    }
+}
+
+.card-footer {
+    margin-top: 6px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.techstacks {
+    display: flex;
+    align-items: center;
+
+    & > svg {
+        margin: 0 6px;
     }
 }

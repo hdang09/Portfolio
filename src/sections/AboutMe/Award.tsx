@@ -9,7 +9,7 @@ const Award = ({ active }: { active: boolean }) => {
     return (
         <div className={cn('tab', { active })}>
             <div className="col-7-5">
-                <img src="/award/certificate-1.jpg" alt="Award" className={cn('award-img')} />
+                <Image src="/award/certificate-1.jpg" alt="Award" className={cn('award-img')} />
 
                 <div>
                     <Image src="/award/certificate-2.jpg" alt="Award" className={cn('award-img')} />

@@ -42,10 +42,10 @@
 
     h3 {
         font-size: 2.4rem;
-        color: $subheading-color;
+        color: var(--subheading-color);
 
         strong {
-            color: $white-color;
+            color: var(--white-color);
         }
     }
 
@@ -55,7 +55,7 @@
 }
 
 .housemate-img {
-    background-color: $subheading-color;
+    background-color: var(--subheading-color);
     display: block;
     width: 360px;
     height: 100px;
@@ -83,7 +83,7 @@
         list-style: none;
         flex-direction: column;
         border-radius: 999px;
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         padding: 8px 4px;
         line-height: 1;
 
@@ -131,16 +131,16 @@
 .shorten-input {
     background: transparent;
     border: none;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     margin: 0 4px;
-    color: $text-color;
+    color: var(--text-color);
     font-size: 1rem;
     padding: 6px;
     width: 47%;
     border-radius: 4px;
 
     &::placeholder {
-        color: $subheading-color;
+        color: var(--subheading-color);
     }
 
     &:focus {
@@ -156,14 +156,14 @@
 
 .shorten-card {
     width: 100%;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     padding: 8px;
     margin-bottom: 24px;
-    color: $subheading-color;
+    color: var(--subheading-color);
     border-radius: 2px;
 
     h3 {
-        color: $text-color;
+        color: var(--text-color);
         margin-bottom: 6px;
     }
 }
@@ -192,7 +192,7 @@
 
     p {
         width: fit-content;
-        color: $subheading-color;
+        color: var(--subheading-color);
         display: inline;
         border-bottom: 1px solid rgba(226, 232, 255, 0.2);
     }
@@ -206,27 +206,30 @@
         display: block;
         width: 12px;
         height: 12px;
-        background-color: $subheading-color;
+        background-color: var(--subheading-color);
         margin: 0 4px;
         border-radius: 2px;
     }
 }
 
 // IQ Challenge
-.iq-preview {
+.iq-preview,
+.hotel-preview {
     display: flex;
 }
 
-.iq-sidebar {
+.iq-sidebar,
+.hotel-sidebar {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.iq-logo {
+.iq-logo,
+.hotel-logo {
     text-align: center;
     font-size: 1.2rem;
-    color: $text-color;
+    color: var(--text-color);
     padding: 8px 0 4px 0;
 }
 
@@ -244,7 +247,7 @@
         display: block;
         width: 16px;
         height: 16px;
-        background-color: $subheading-color;
+        background-color: var(--subheading-color);
         margin-right: 8px;
         border-radius: 2px;
         cursor: pointer;
@@ -263,7 +266,7 @@
 .iq-quetion-item {
     display: flex;
     justify-content: space-between;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 8px 16px;
     margin-bottom: 10px;
@@ -273,12 +276,12 @@
     margin-right: 10px;
 
     h4 {
-        color: $text-color;
+        color: var(--text-color);
         font-size: 1rem;
     }
 
     p {
-        color: $subheading-color;
+        color: var(--subheading-color);
         font-size: 1rem;
         max-width: 200px;
     }
@@ -303,11 +306,11 @@
     }
 
     h3 {
-        color: $subheading-color;
+        color: var(--subheading-color);
         font-size: 1.8rem;
 
         span {
-            color: $text-color;
+            color: var(--text-color);
         }
     }
 
@@ -326,6 +329,95 @@
 .netclick-img {
     width: 175px;
     height: 175px;
-    // background-color: $subheading-color;
+    // background-color: var(--subheading-color);
     border-radius: 4px;
+}
+
+// F-Code
+.fcode-left {
+    & h3 {
+        font-size: 2rem;
+        color: var(--subheading-color);
+        line-height: 1.4;
+    }
+
+    span {
+        display: inline-block;
+        color: var(--text-color);
+        margin-bottom: 12px;
+    }
+}
+
+// Hotel Reservation
+.hotel-header {
+    p {
+        font-size: 1rem;
+    }
+}
+
+.hotel-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 24px;
+    list-style: none;
+    font-size: 1.2rem;
+
+    li {
+        cursor: pointer;
+        margin-bottom: 12px;
+    }
+
+    li:before {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: var(--subheading-color);
+        margin-right: 8px;
+        border-radius: 2px;
+    }
+}
+
+.hotel-main {
+    padding: 8px 24px;
+    flex: 1;
+}
+
+.hotel-content {
+    h4 {
+        margin-top: 20px;
+        margin-bottom: 4px;
+    }
+}
+
+.hotel-dashboard {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+        display: block;
+        width: 100%;
+        height: 32px;
+        background-color: var(--subheading-color);
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+}
+
+.hotel-availability {
+    display: block;
+    width: 100%;
+    height: 75px;
+
+    table {
+        width: inherit;
+        height: inherit;
+        background-color: var(--subheading-color);
+        border-radius: 2px;
+    }
 }

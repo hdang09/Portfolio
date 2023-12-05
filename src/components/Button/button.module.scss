@@ -12,11 +12,11 @@
     display: inline-flex;
     align-items: center;
     opacity: 1;
-    color: $text-color;
+    color: var(--text-color);
     transition: opacity $transition;
 
     &::before {
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
         content: '';
         left: 0;
         top: 0;
@@ -50,4 +50,8 @@
             justify-content: center;
         }
     }
+}
+
+html:not([class='dark']) .button {
+    background-color: $white-color;
 }

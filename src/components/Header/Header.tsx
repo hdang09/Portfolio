@@ -41,7 +41,7 @@ const Header = () => {
                         <a href="#about-me">About me</a>
                         <a href="#projects">
                             Projects
-                            <span className={cn('project-count')}>4</span>
+                            <span className={cn('project-count')}>6</span>
                         </a>
                         <a href="#contact">Contact</a>
                         <a className={cn('nav-btn-link')} href="#">
@@ -55,10 +55,12 @@ const Header = () => {
                         </a>
                     </nav>
 
-                    <button className={cn('action-btn', 'header-btn')} onClick={downloadResume}>
-                        <HiDownload />
-                        <span>Resume</span>
-                    </button>
+                    <div className={cn('header-btn')}>
+                        <button className={cn('action-btn')} onClick={downloadResume}>
+                            <HiDownload />
+                            <span>Resume</span>
+                        </button>
+                    </div>
                 </div>
 
                 <Image

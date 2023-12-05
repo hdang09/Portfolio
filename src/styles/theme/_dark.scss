@@ -1,0 +1,22 @@
+html.dark {
+    // Text
+    --text-color: #e2e8ff;
+    --nav-text-color: #e2e8ffbf;
+    --subheading-color: #e2e8ff8c; /* 0.55 */
+
+    // Base
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --secondary-color: linear-gradient(180deg, rgba(240, 238, 249, 0.8) 0%, #e2e8ff 100%);
+    --border-color: rgba(226, 232, 255, 0.08);
+    --background-color: #05051e;
+
+    // Navigation
+    --nav-background-color: rgba(5, 5, 30, 0.8);
+
+    // Card
+    --card-background: rgba(226, 232, 255, 0.02);
+
+    // Icon
+    --github-color: var(--white-color);
+}

@@ -6,7 +6,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    color: $white-color;
+    color: var(--white-color);
     padding: 50px 0;
 }
 
@@ -16,7 +16,7 @@
 
     .heading {
         font-size: 6rem;
-        color: $white-color;
+        color: var(--white-color);
         margin-bottom: 40px;
         text-align: center;
     }
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    background-color: $white-color;
+    background-color: var(--white-color);
     border-radius: 999px;
     color: var(--background-color);
 }
@@ -47,7 +47,7 @@
 .text {
     margin-left: 20px;
     font-size: 1.8rem;
-    color: $subheading-color;
+    color: var(--subheading-color);
     text-align: center;
 }
 
@@ -70,14 +70,14 @@
     width: 100%;
     border: none;
     padding: 10px;
-    border-bottom: 1px solid $subheading-color;
+    border-bottom: 1px solid var(--subheading-color);
     margin-bottom: 26px;
     font-size: 1.8rem;
-    color: $text-color;
+    color: var(--text-color);
     outline: transparent;
     font-family: 'QuickSand';
     background-color: transparent;
-    color: $white-color;
+    color: var(--white-color);
 }
 
 textarea[placeholder='Message'] {

@@ -1,8 +1,22 @@
-import { SiNextdotjs, SiSpring, SiStyledcomponents } from 'react-icons/si';
+import { IconType } from 'react-icons';
+import {
+    SiNextdotjs,
+    SiSpring,
+    SiStyledcomponents,
+    SiReact,
+    SiTailwindcss,
+    SiMicrosoftsqlserver,
+    SiDocker,
+    SiNodedotjs,
+    SiExpress,
+} from 'react-icons/si';
+import { BiLogoTypescript } from 'react-icons/bi';
+import { GrMysql } from 'react-icons/gr';
+import { FaJava } from 'react-icons/fa';
 import { IoIosLink } from 'react-icons/io';
 import { AiOutlineBulb } from 'react-icons/ai';
 import { MdMovie } from 'react-icons/md';
-import { FaSass } from 'react-icons/fa';
+import { RiHotelFill } from 'react-icons/ri';
 import { JSX } from 'preact/jsx-runtime';
 
 import Card from '@/components/Card';
@@ -13,61 +27,67 @@ import HouseMatePreview from './HouseMatePreview';
 import ShortenURLPreview from './ShortenURLPreview';
 import IQChallengePreview from './IQChallengePreview';
 import NetClickPreview from './NetClickPreview';
-
-const Tech = {
-    Spring: <SiSpring size={40} color="green" />,
-    NextJS: <SiNextdotjs size={40} color="black" />,
-    Styledcomponents: <SiStyledcomponents size={40} />,
-    SaaS: <FaSass size={40} />,
-};
+import FCodeLandingPagePreview from './FCodeLandingPagePreview';
+import HotelReservationPreview from './HotelReservationPreview';
 
 type Project = {
-    name: string;
-    desc: string;
-    imgUrl: string;
+    title: string;
+    description: string;
     url: string;
-    techstacks: any[];
+    techstacks: IconType[];
     preview: JSX.Element;
-    icon: JSX.Element | null;
+    icon: JSX.Element | string;
 };
 
 // Constants
 const PROJECTS: Project[] = [
     {
-        name: 'HouseMate',
-        desc: 'A web application that provides service for student apartments',
-        imgUrl: '/project/housemate-white.png',
+        title: 'HouseMate',
+        description: 'A web application that provides service for student apartments',
         url: 'https://housemate.site',
-        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
+        techstacks: [SiReact, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
         preview: <HouseMatePreview />,
-        icon: null,
+        icon: '/project/housemate-white.png',
     },
     {
-        name: 'Shorten URL',
-        desc: 'An URL Shortener transform long, ugly links into nice, short URLs',
-        imgUrl: '/award/certificate-1.jpg',
+        title: 'Shorten URL',
+        description: 'An URL Shortener transform long, ugly links into nice, short URLs',
         url: 'https://shorten.hdang09.tech',
-        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
+        techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql],
         preview: <ShortenURLPreview />,
         icon: <IoIosLink />,
     },
     {
-        name: 'NetClick',
-        desc: 'A movie web application',
-        imgUrl: '/award/certificate-1.jpg',
+        title: 'NetClick',
+        description: 'A movie web application',
         url: 'https://netclick.hdang09.tech',
-        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
+        techstacks: [FaJava, SiTailwindcss, SiMicrosoftsqlserver],
         preview: <NetClickPreview />,
         icon: <MdMovie />,
     },
     {
-        name: 'IQ Challenge',
-        desc: 'A quiz game for the orientation at FPT University HCM.',
-        imgUrl: '/award/certificate-1.jpg',
+        title: 'IQ Challenge',
+        description: 'A quiz game for the orientation at FPT University HCM.',
         url: 'https://iq.hdang09.tech',
-        techstacks: [Tech.Spring, Tech.NextJS, Tech.Styledcomponents],
+        techstacks: [SiNextdotjs, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
         preview: <IQChallengePreview />,
         icon: <AiOutlineBulb />,
+    },
+    {
+        title: 'F-Code Landing Page',
+        description: 'A landing page for recruiting new members into F-Code Club.',
+        url: 'https://f-code.tech',
+        techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql, SiDocker],
+        preview: <FCodeLandingPagePreview />,
+        icon: <AiOutlineBulb />,
+    },
+    {
+        title: 'Hotel Reservation',
+        description: 'A project to book rooms for receptionist.',
+        url: 'https://hotel.hdang09.tech',
+        techstacks: [SiReact, SiTailwindcss, SiNodedotjs, SiExpress],
+        preview: <HotelReservationPreview />,
+        icon: <RiHotelFill />,
     },
 ];
 
@@ -83,14 +103,7 @@ const Projects = () => {
         >
             <div className="col-6">
                 {PROJECTS.map((project) => (
-                    <Card
-                        title={project.name}
-                        description={project.desc}
-                        key={project.name}
-                        url={project.url}
-                        icon={project.icon || project.imgUrl}
-                        preview={project.preview}
-                    />
+                    <Card key={project.title} {...project} />
                 ))}
             </div>
         </Section>

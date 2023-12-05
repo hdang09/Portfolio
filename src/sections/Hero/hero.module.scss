@@ -35,16 +35,17 @@
     border-radius: 50%;
     position: absolute;
     width: 100%;
-    background-color: #05051e;
+    background-color: var(--background-color);
 
     &::before {
         background: linear-gradient(to top, transparent 70%, rgba(255, 255, 255, 0.05) 100%);
         border-radius: inherit;
         content: '';
         inset: 0;
-        -webkit-mask: linear-gradient($white-color 0 0) content-box,
-            linear-gradient($white-color 0 0);
-        mask: linear-gradient($white-color 0 0) content-box, linear-gradient($white-color 0 0);
+        -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
+            linear-gradient(var(--white-color) 0 0);
+        mask: linear-gradient(var(--white-color) 0 0) content-box,
+            linear-gradient(var(--white-color) 0 0);
         mask-composite: xor;
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -150,7 +151,7 @@
 .title {
     font-size: 7.2rem;
     line-height: 1.4;
-    background-image: $secondary-color;
+    background-image: var(--secondary-color);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
