@@ -12,13 +12,13 @@ interface ButtonProps extends PropsWithChildren {
 
 const Button = ({ large, responsive, children, onClick, ...rest }: ButtonProps) => {
     return (
-        <div
+        <button
             className={cn('button', large && 'large', responsive && 'responsive')}
             onClick={onClick}
             {...rest}
         >
             {children}
-        </div>
+        </button>
     );
 };
 
