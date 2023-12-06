@@ -71,7 +71,7 @@ nav {
     height: auto;
     padding: 4px 0;
     position: relative;
-    transition: width $transition;
+    transition: all $transition;
     background: var(--nav-background-color);
     backdrop-filter: blur(4px);
     z-index: 1000;

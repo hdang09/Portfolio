@@ -36,6 +36,7 @@
     position: absolute;
     width: 100%;
     background-color: var(--background-color);
+    transition: background-color 0.2s ease-in;
 
     &::before {
         background: linear-gradient(to top, transparent 70%, rgba(255, 255, 255, 0.05) 100%);

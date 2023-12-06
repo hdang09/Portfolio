@@ -103,7 +103,7 @@
 
         li:first-child::after {
             background: rgba(226, 232, 255, 0.04);
-            box-shadow: 0 0 20px rgba(226, 232, 255, 0.1215686275) inset;
+            box-shadow: 0 0 20px rgba(226, 232, 255, 0.12) inset;
             content: '';
             position: absolute;
             width: 36px;
@@ -352,6 +352,7 @@
 .hotel-header {
     p {
         font-size: 1rem;
+        color: var(--subheading-color);
     }
 }
 
@@ -382,6 +383,10 @@
 .hotel-main {
     padding: 8px 24px;
     flex: 1;
+
+    h4 {
+        color: var(--text-color);
+    }
 }
 
 .hotel-content {

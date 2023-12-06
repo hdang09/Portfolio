@@ -11,7 +11,7 @@ import styles from './card.module.scss';
 const cn = classNames.bind(styles);
 
 interface CardProps {
-    icon: JSX.Element | string;
+    icon: JSX.Element;
     title: string;
     description: string;
     url: string;
@@ -30,7 +30,7 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
 
             <div className={cn('card-heading')}>
                 <a href={url} target="_blank" aria-label={title} className={cn('icon')}>
-                    {typeof icon === 'string' ? <img src={icon} alt={title} /> : icon}
+                    {icon}
                 </a>
                 <a href={url} target="_blank" className={cn('card-title')}>
                     {title}
@@ -45,7 +45,7 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
                     {techstacks.map((tech) => {
                         const Tech = tech;
 
-                        return <Tech size={32} />;
+                        return <Tech />;
                     })}
                 </div>
 

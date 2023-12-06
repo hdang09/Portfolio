@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons';
 import {
     SiNextdotjs,
     SiSpring,
@@ -17,11 +16,13 @@ import { IoIosLink } from 'react-icons/io';
 import { AiOutlineBulb } from 'react-icons/ai';
 import { MdMovie } from 'react-icons/md';
 import { RiHotelFill } from 'react-icons/ri';
-import { JSX } from 'preact/jsx-runtime';
 
 import Card from '@/components/Card';
 import Section from '@/components/Section';
 import Strong from '@/components/Strong';
+
+import HousemateSVG from '@/assets/housemate.svg?react';
+import FcodeSVG from '@/assets/f-code.svg?react';
 
 import HouseMatePreview from './HouseMatePreview';
 import ShortenURLPreview from './ShortenURLPreview';
@@ -30,24 +31,15 @@ import NetClickPreview from './NetClickPreview';
 import FCodeLandingPagePreview from './FCodeLandingPagePreview';
 import HotelReservationPreview from './HotelReservationPreview';
 
-type Project = {
-    title: string;
-    description: string;
-    url: string;
-    techstacks: IconType[];
-    preview: JSX.Element;
-    icon: JSX.Element | string;
-};
-
 // Constants
-const PROJECTS: Project[] = [
+const PROJECTS = [
     {
         title: 'HouseMate',
         description: 'A web application that provides service for student apartments',
         url: 'https://housemate.site',
         techstacks: [SiReact, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
         preview: <HouseMatePreview />,
-        icon: '/project/housemate-white.png',
+        icon: <HousemateSVG />,
     },
     {
         title: 'Shorten URL',
@@ -79,7 +71,7 @@ const PROJECTS: Project[] = [
         url: 'https://f-code.tech',
         techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql, SiDocker],
         preview: <FCodeLandingPagePreview />,
-        icon: <AiOutlineBulb />,
+        icon: <FcodeSVG />,
     },
     {
         title: 'Hotel Reservation',
