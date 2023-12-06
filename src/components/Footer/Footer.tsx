@@ -63,7 +63,9 @@ const Footer = () => {
             <div className={cn('copyright')}>
                 <p className={cn('text')}>
                     Copyright © 2023 <Strong>hdang09</Strong>. Inspired by{' '}
-                    <a href="https://dribbble.com">Dribbble</a>
+                    <a href="https://dribbble.com" target="_blank">
+                        Dribbble
+                    </a>
                 </p>
             </div>
         </footer>

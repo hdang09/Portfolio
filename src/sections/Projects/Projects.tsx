@@ -21,8 +21,8 @@ import Card from '@/components/Card';
 import Section from '@/components/Section';
 import Strong from '@/components/Strong';
 
-import HousemateSVG from '@/assets/housemate.svg?react';
-import FcodeSVG from '@/assets/f-code.svg?react';
+import HousemateSVG from '@/assets/svg/housemate.svg?react';
+import FcodeSVG from '@/assets/svg/f-code.svg?react';
 
 import HouseMatePreview from './HouseMatePreview';
 import ShortenURLPreview from './ShortenURLPreview';

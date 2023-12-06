@@ -1,3 +1,4 @@
+import { h } from 'preact';
 import classNames from 'classnames/bind';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { IoEarthOutline } from 'react-icons/io5';
@@ -11,6 +12,7 @@ import Strong from '@/components/Strong';
 import Section from '@/components/Section';
 
 import styles from './contact.module.scss';
+import React from 'preact/compat';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -54,7 +56,9 @@ const Contact = () => {
         message: '',
     });
 
-    const validate = () => {
+    const validate = (event: h.JSX.TargetedMouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+
         if (form.firstName.trim().length < 2) {
             toast.error('Your first name is in valid');
             return;
@@ -156,7 +160,7 @@ const Contact = () => {
                         ></textarea>
 
                         <div className={cn('btn-wrapper')}>
-                            <Button large responsive onClick={validate}>
+                            <Button large responsive onClick={(e) => validate(e)}>
                                 Send Message
                             </Button>
                         </div>

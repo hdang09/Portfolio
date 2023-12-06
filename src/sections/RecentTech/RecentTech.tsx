@@ -19,11 +19,7 @@ const RecentTech = () => {
             <div className={cn('list')}>
                 {RECENT_TECH.map((tech) => (
                     <a href={tech.url} target="_blank">
-                        <Image
-                            src={`/recent-tech/${tech.image}`}
-                            alt={tech.name}
-                            className={cn('img')}
-                        />
+                        <Image src={tech.image} alt={tech.name} className={cn('img')} />
                     </a>
                 ))}
             </div>

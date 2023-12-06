@@ -1,7 +1,10 @@
 import classNames from 'classnames/bind';
+
+import fcodeHero from '@/assets/project/f-code.png';
 import Button from '@/components/Button';
-import styles from './projects.module.scss';
 import Image from '@/components/Image';
+
+import styles from './projects.module.scss';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -60,11 +63,7 @@ const FCodeLandingPagePreview = () => {
                 </div>
 
                 <div className={cn('netclick-right')}>
-                    <Image
-                        src="/project/f-code.png"
-                        alt="NetClick Hero"
-                        className={cn('netclick-img')}
-                    />
+                    <Image src={fcodeHero} alt="F-Code Hero" className={cn('netclick-img')} />
                 </div>
             </div>
         </div>

@@ -4,8 +4,13 @@ import { GiServerRack } from 'react-icons/gi';
 import { FaCode } from 'react-icons/fa6';
 import { CgWebsite } from 'react-icons/cg';
 
-import styles from './about-me.module.scss';
+import techStackItem1 from '@/assets/teckstacks/items/item-1.png';
+import techStackItem2 from '@/assets/teckstacks/items/item-2.png';
+import techStackItem3 from '@/assets/teckstacks/items/item-3.png';
+import techStackItem4 from '@/assets/teckstacks/items/item-4.png';
 import Image from '@/components/Image';
+
+import styles from './about-me.module.scss';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -15,25 +20,25 @@ const TECH_STACKS = [
         title: 'Front-end',
         desc: 'HTML, CSS, ReactJS, ViteJS, NextJS, SASS, Tailwind CSS, Bootstrap, Redux, ANT Design, Styled Components.',
         icon: <CgWebsite color="#05051e" />,
-        bgIcon: '/teckstacks/items/item-1.png',
+        bgIcon: techStackItem1,
     },
     {
         title: 'Back-end',
         desc: 'JSP, Servlet, Spring MVC, JPA, Hibernate, Spring Boot, Spring Security, SQL Server, MySQL, MongoDB.',
         icon: <FaCode color="#05051e" />,
-        bgIcon: '/teckstacks/items/item-2.png',
+        bgIcon: techStackItem2,
     },
     {
         title: 'Programming Languages',
         desc: 'C, Java, JavaScript, TypeScript.',
         icon: <FaJava color="#05051e" />,
-        bgIcon: '/teckstacks/items/item-3.png',
+        bgIcon: techStackItem3,
     },
     {
         title: 'DevOps',
         desc: 'Linux, Docker, GitHub Actions, Lightsail.',
         icon: <GiServerRack color="#05051e" />,
-        bgIcon: '/teckstacks/items/item-4.png',
+        bgIcon: techStackItem4,
     },
 ];
 

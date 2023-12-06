@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 
+import light from '@/assets/components/light.png';
 import Container from '@/components/Container';
 import FadeUp from '@/components/FadeUp';
 import Image from '@/components/Image';
@@ -21,16 +22,8 @@ const Hero = () => {
                     </div>
 
                     <div className={cn('lights')}>
-                        <Image
-                            src="/components/light.png"
-                            alt="Light"
-                            className={cn('light', 'light-1')}
-                        />
-                        <Image
-                            src="/components/light.png"
-                            alt="Light"
-                            className={cn('light', 'light-2')}
-                        />
+                        <Image src={light} alt="Light" className={cn('light', 'light-1')} />
+                        <Image src={light} alt="Light" className={cn('light', 'light-2')} />
                     </div>
                 </div>
 

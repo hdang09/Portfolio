@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 
+import aboutImg from '@/assets/about/about-img.png';
 import Button from '@/components/Button';
 import Strong from '@/components/Strong';
 import FadeUp from '@/components/FadeUp';
@@ -15,7 +16,7 @@ const About = ({ active }: { active: boolean }) => {
         <div className={cn('tab', 'about', { active })}>
             <div className="col-6">
                 <div>
-                    <Image src="/about/about-img.png" alt="About" />
+                    <Image src={aboutImg} alt="About" />
                 </div>
 
                 <div>

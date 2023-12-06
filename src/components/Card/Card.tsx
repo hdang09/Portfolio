@@ -3,6 +3,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import classNames from 'classnames/bind';
 import { JSX } from 'preact/compat';
 
+import backgroundDots from '@/assets/components/bg-dots.png';
 import Button from '@/components/Button';
 import Image from '@/components/Image';
 
@@ -26,7 +27,7 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
 
     return (
         <div className={cn('card')}>
-            <Image src="/components/bg-dots.png" alt="Background dots" className={cn('bg-dots')} />
+            <Image src={backgroundDots} alt="Background dots" className={cn('bg-dots')} />
 
             <div className={cn('card-heading')}>
                 <a href={url} target="_blank" aria-label={title} className={cn('icon')}>

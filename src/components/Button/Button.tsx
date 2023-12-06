@@ -1,13 +1,14 @@
 import classNames from 'classnames/bind';
 import styles from './button.module.scss';
 import { PropsWithChildren } from 'preact/compat';
+import { h } from 'preact';
 
 const cn = classNames.bind(styles);
 
 interface ButtonProps extends PropsWithChildren {
     large?: boolean;
     responsive?: boolean;
-    onClick?: () => void;
+    onClick?: (event: h.JSX.TargetedMouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button = ({ large, responsive, children, onClick, ...rest }: ButtonProps) => {
