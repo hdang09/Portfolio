@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import { useEffect, useState } from 'preact/hooks';
 import { HiDownload } from 'react-icons/hi';
 
+import stageLight from '@/assets/components/stage-light.png';
 import { RESUME_URL } from '@/config/constants';
 import Container from '@/components/Container';
 import Image from '@/components/Image';
@@ -63,11 +64,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <Image
-                    src="/components/stage-light.png"
-                    alt="Stage light"
-                    className={cn('stage-light')}
-                />
+                <Image src={stageLight} alt="Stage light" className={cn('stage-light')} />
             </Container>
         </header>
     );

@@ -7,14 +7,20 @@ const cn = classNames.bind(styles);
 
 interface ButtonProps extends PropsWithChildren {
     large?: boolean;
+    medium?: boolean;
     responsive?: boolean;
     onClick?: (event: h.JSX.TargetedMouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ large, responsive, children, onClick, ...rest }: ButtonProps) => {
+const Button = ({ large, medium, responsive, children, onClick, ...rest }: ButtonProps) => {
     return (
         <button
-            className={cn('button', large && 'large', responsive && 'responsive')}
+            className={cn(
+                'button',
+                large && 'large',
+                medium && 'medium',
+                responsive && 'responsive',
+            )}
             onClick={onClick}
             {...rest}
         >

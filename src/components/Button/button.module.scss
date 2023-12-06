@@ -45,6 +45,11 @@
         padding: 12px 24px;
     }
 
+    &.medium {
+        height: 42px;
+        font-size: 1.4rem;
+    }
+
     &.responsive {
         @include md {
             width: 100%;
