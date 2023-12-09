@@ -10,9 +10,9 @@ import styles from './about-me.module.scss';
 // classnames
 const cn = classNames.bind(styles);
 
-const Award = ({ active }: { active: boolean }) => {
+const Award = () => {
     return (
-        <div className={cn('tab', { active })}>
+        <div className={cn('tab')}>
             <div className="col-7-5">
                 <Image src={certificate1} alt="Award" className={cn('award-img')} />
 

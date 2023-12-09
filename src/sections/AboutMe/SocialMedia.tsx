@@ -30,9 +30,9 @@ const SOCIAL_MEDIA = [
 ];
 
 // Component
-const SocialMedia = ({ active }: { active: boolean }) => {
+const SocialMedia = () => {
     return (
-        <div className={cn('tab', { active })}>
+        <div className={cn('tab')}>
             <div className={cn('col-3')}>
                 {SOCIAL_MEDIA.map((item) => (
                     <a href={item.href} key={item.name} className={cn('sm-group')}>

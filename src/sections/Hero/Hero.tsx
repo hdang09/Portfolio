@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { motion } from 'framer-motion';
 
 import light from '@/assets/components/light.png';
 import Container from '@/components/Container';
@@ -28,9 +29,22 @@ const Hero = () => {
                 </div>
 
                 <div className={cn('content')}>
-                    <a href="mailto:contact@hdang09.tech" className={cn('badge')}>
-                        <span>contact@hdang09.tech</span>
-                    </a>
+                    <motion.a
+                        initial={{ width: '32px' }}
+                        animate={{ width: '220px' }}
+                        transition={{ duration: 0.75 }}
+                        href="mailto:contact@hdang09.tech"
+                        className={cn('badge')}
+                    >
+                        <motion.span
+                            initial={{ translateY: '-20px', opacity: 0 }}
+                            animate={{ translateY: '0', opacity: 1 }}
+                            transition={{ delay: 0.75, duration: 0.25 }}
+                            style={{ display: 'inline-block' }}
+                        >
+                            contact@hdang09.tech
+                        </motion.span>
+                    </motion.a>
 
                     <div>
                         <FadeUp>

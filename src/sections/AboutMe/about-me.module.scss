@@ -35,13 +35,17 @@
     }
 }
 
-.tab {
-    display: none;
-    margin-top: 60px;
+.nav-item-progress {
+    width: 100%;
+    height: 2px;
+    background-color: var(--subheading-color);
 
-    &.active {
-        display: block;
-    }
+    transform-origin: 0%;
+}
+
+.tab {
+    display: block;
+    margin-top: 60px;
 }
 
 .about {

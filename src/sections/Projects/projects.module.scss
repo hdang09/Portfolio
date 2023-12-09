@@ -1,14 +1,6 @@
 @import '@/styles/media-queries.scss';
 @import '@/styles/variables.module.scss';
 
-.section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    padding: 50px 0;
-}
-
 // PROJECTS
 .housemate-preview,
 .shorten-preview,

@@ -11,9 +11,9 @@ import styles from './about-me.module.scss';
 // classnames
 const cn = classNames.bind(styles);
 
-const About = ({ active }: { active: boolean }) => {
+const About = () => {
     return (
-        <div className={cn('tab', 'about', { active })}>
+        <div className={cn('tab', 'about')}>
             <div className="col-6">
                 <div>
                     <Image src={aboutImg} alt="About" />

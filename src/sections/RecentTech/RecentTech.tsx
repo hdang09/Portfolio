@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { motion } from 'framer-motion';
 
 import { RECENT_TECH } from '@/config/constants';
 import FadeUp from '@/components/FadeUp';
@@ -17,10 +18,17 @@ const RecentTech = () => {
             </FadeUp>
 
             <div className={cn('list')}>
-                {RECENT_TECH.map((tech) => (
-                    <a href={tech.url} target="_blank">
+                {RECENT_TECH.map((tech, index) => (
+                    <motion.a
+                        viewport={{ once: true }}
+                        href={tech.url}
+                        target="_blank"
+                        initial={{ translateY: '20px', opacity: 0 }}
+                        whileInView={{ translateY: 0, opacity: 1 }}
+                        transition={{ delay: index / 10, duration: 0.4 }}
+                    >
                         <Image src={tech.image} alt={tech.name} className={cn('img')} />
-                    </a>
+                    </motion.a>
                 ))}
             </div>
         </section>

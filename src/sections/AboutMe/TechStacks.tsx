@@ -42,9 +42,9 @@ const TECH_STACKS = [
     },
 ];
 
-const TechStacks = ({ active }: { active: boolean }) => {
+const TechStacks = () => {
     return (
-        <div className={cn('tab', { active })}>
+        <div className={cn('tab')}>
             <div className="col-6">
                 {TECH_STACKS.slice(0, 2).map((item, index) => (
                     <div className={cn('techstacks-item')} key={index}>

@@ -18,10 +18,10 @@ interface SectionProps extends PropsWithChildren {
 
 const Section = ({ children, id, heading, center, thin }: SectionProps) => {
     return (
-        <section id={id} className={cn('section', thin && 'thin')}>
+        <section id={id} className={cn('section', { thin })}>
             <Container>
                 <FadeUp>
-                    <h2 className={cn('heading', center && 'center')}>{heading}</h2>
+                    <h2 className={cn('heading', { center })}>{heading}</h2>
                 </FadeUp>
 
                 {children}
