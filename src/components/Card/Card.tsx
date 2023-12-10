@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { IconType } from 'react-icons';
 import { FiExternalLink } from 'react-icons/fi';
 import classNames from 'classnames/bind';
@@ -26,7 +27,13 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
     };
 
     return (
-        <div className={cn('card')}>
+        <motion.div
+            className={cn('card')}
+            initial={{ scale: 0.5, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+        >
             <Image src={backgroundDots} alt="Background dots" className={cn('bg-dots')} />
 
             <div className={cn('card-heading')}>
@@ -39,7 +46,15 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
                 <p className={cn('description')}>{description}</p>
             </div>
 
-            <div className={cn('card-box')}>{preview}</div>
+            <motion.div
+                initial={{ translateY: '20px', opacity: 0 }}
+                whileInView={{ translateY: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                viewport={{ once: true }}
+                className={cn('card-box')}
+            >
+                {preview}
+            </motion.div>
 
             <div className={cn('card-footer')}>
                 <div className={cn('techstacks')}>
@@ -55,7 +70,7 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
                     Demo
                 </Button>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

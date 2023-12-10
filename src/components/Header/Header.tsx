@@ -63,7 +63,7 @@ const Header = () => {
 
                     <motion.nav
                         initial={{ width: '48px', height: '48px' }}
-                        animate={{ width: 'revert-layer' }}
+                        animate={{ width: 'revert-layer', display: 'revert-layer' }}
                     >
                         {NAV_LINKS.map((item, index) => (
                             <motion.a

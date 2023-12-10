@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { GrMysql } from 'react-icons/gr';
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaSass } from 'react-icons/fa';
 import { IoIosLink } from 'react-icons/io';
 import { AiOutlineBulb } from 'react-icons/ai';
 import { MdMovie } from 'react-icons/md';
@@ -61,7 +61,7 @@ const PROJECTS = [
         title: 'IQ Challenge',
         description: 'A quiz game for the orientation at FPT University HCM.',
         url: 'https://iq.hdang09.tech',
-        techstacks: [SiNextdotjs, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
+        techstacks: [SiNextdotjs, BiLogoTypescript, FaSass, SiSpring, GrMysql],
         preview: <IQChallengePreview />,
         icon: <AiOutlineBulb />,
     },
