@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { JSX, PropsWithChildren } from 'preact/compat';
+import { CSSProperties, JSX, PropsWithChildren } from 'preact/compat';
 
 import FadeUp from '@/components/FadeUp';
 import Container from '@/components/Container';
@@ -14,11 +14,12 @@ interface SectionProps extends PropsWithChildren {
     heading: JSX.Element;
     center?: boolean;
     thin?: boolean;
+    style?: string | CSSProperties | undefined;
 }
 
-const Section = ({ children, id, heading, center, thin }: SectionProps) => {
+const Section = ({ children, id, heading, center, thin, style }: SectionProps) => {
     return (
-        <section id={id} className={cn('section', { thin })}>
+        <section id={id} className={cn('section', { thin })} style={style}>
             <Container>
                 <FadeUp>
                     <h2 className={cn('heading', { center })}>{heading}</h2>

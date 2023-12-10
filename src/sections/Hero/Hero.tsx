@@ -37,8 +37,8 @@ const Hero = () => {
                         className={cn('badge')}
                     >
                         <motion.span
-                            initial={{ translateY: '-20px', opacity: 0 }}
-                            animate={{ translateY: '0', opacity: 1 }}
+                            initial={{ y: '-20px', opacity: 0 }}
+                            animate={{ y: '0', opacity: 1 }}
                             transition={{ delay: 0.75, duration: 0.25 }}
                             style={{ display: 'inline-block' }}
                         >

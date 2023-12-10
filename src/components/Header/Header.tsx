@@ -69,8 +69,8 @@ const Header = () => {
                             <motion.a
                                 href={item.href}
                                 key={item.id}
-                                initial={{ translateY: '20px', opacity: 0 }}
-                                animate={{ translateY: '0px', opacity: 1 }}
+                                initial={{ y: '20px', opacity: 0 }}
+                                animate={{ y: '0px', opacity: 1 }}
                                 transition={{ delay: 0.4 + index / 10 }}
                             >
                                 {item.children}

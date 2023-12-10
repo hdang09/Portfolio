@@ -37,7 +37,7 @@ const CARDS: Card[] = [
         title: 'contact@hdang09.tech',
         icon: <AiOutlineMail />,
         text: 'Official Mail',
-        href: 'mailto:contact@hdang09.tech?cc=dangtranhai628@gmail.com',
+        href: 'mailto:contact@hdang09.tech',
     },
     {
         title: '0866 914 464',
@@ -93,7 +93,7 @@ const Contact = () => {
 
         toast.success('Created! You will be redirect to Mail', { duration: 5000 });
         setTimeout(() => {
-            window.location.href = `mailto:contact@hdang09.tech?cc=dangtranhai628@gmail.com&subject=${form.subject}&body=${form.message}`;
+            window.location.href = `mailto:contact@hdang09.tech&subject=${form.subject}&body=${form.message}`;
         }, 5000);
     };
 
@@ -170,7 +170,7 @@ const Contact = () => {
                 <div className={cn('cards')}>
                     {CARDS.map((card) => (
                         <HeadlessCard key={card.title}>
-                            <a href={card.href} className={cn('title')}>
+                            <a href={card.href} className={cn('title')} target="_blank">
                                 {card.title}
                             </a>
 

@@ -29,7 +29,7 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
     return (
         <motion.div
             className={cn('card')}
-            initial={{ scale: 0.5, opacity: 0 }}
+            initial={{ scale: 0.75, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
@@ -47,8 +47,8 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
             </div>
 
             <motion.div
-                initial={{ translateY: '20px', opacity: 0 }}
-                whileInView={{ translateY: 0, opacity: 1 }}
+                initial={{ y: '20px', opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
                 viewport={{ once: true }}
                 className={cn('card-box')}

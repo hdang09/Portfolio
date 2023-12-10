@@ -23,8 +23,8 @@ const RecentTech = () => {
                         viewport={{ once: true }}
                         href={tech.url}
                         target="_blank"
-                        initial={{ translateY: '20px', opacity: 0 }}
-                        whileInView={{ translateY: 0, opacity: 1 }}
+                        initial={{ y: '20px', opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: index / 10, duration: 0.4 }}
                     >
                         <Image src={tech.image} alt={tech.name} className={cn('img')} />

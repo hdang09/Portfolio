@@ -10,6 +10,7 @@
     isolation: isolate;
     border: 1px solid var(--border-color);
     margin-bottom: 24px;
+    overflow: auto;
 }
 
 .bg-dots {
@@ -53,6 +54,10 @@
 
 .description {
     color: var(--subheading-color);
+
+    @include md-lg {
+        min-height: 48px;
+    }
 }
 
 .card-box {

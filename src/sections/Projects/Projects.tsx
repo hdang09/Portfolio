@@ -67,7 +67,7 @@ const PROJECTS = [
     },
     {
         title: 'F-Code Landing Page',
-        description: 'A landing page for recruiting new members into F-Code Club.',
+        description: 'A landing page for recruiting members into F-Code Club.',
         url: 'https://f-code.tech',
         techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql, SiDocker],
         preview: <FCodeLandingPagePreview />,

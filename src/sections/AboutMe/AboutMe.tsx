@@ -44,17 +44,17 @@ const AboutMe = () => {
 
     const ref = useRef(null);
     // const { scrollYProgress } = useScroll({
-    //     container: ref,
+    //     target: ref,
     // });
 
     // const handleScroll = () => {
     //     const scrollY = window.scrollY;
 
-    //     if (scrollY < 750) {
+    //     if (scrollY < 1500) {
     //         setActiveTab(1);
-    //     } else if (scrollY < 1000) {
+    //     } else if (scrollY < 2000) {
     //         setActiveTab(2);
-    //     } else if (scrollY < 1250) {
+    //     } else if (scrollY < 2500) {
     //         setActiveTab(3);
     //     } else {
     //         setActiveTab(4);
@@ -88,45 +88,42 @@ const AboutMe = () => {
                     About <Strong>me</Strong>
                 </>
             }
+            // style={{
+            //     position: 'sticky',
+            //     top: '0',
+            // }}
         >
-            <div
-                style={{
-                    position: 'sticky',
-                    top: '150px',
-                }}
-            >
-                <ul className={cn('nav-list')}>
-                    {NAV_LIST.map((item) => (
-                        <motion.li
-                            onClick={() => setActiveTab(item.id)}
-                            className={cn('nav-item', { active: activeTab === item.id })}
-                            key={item.id}
-                        >
-                            {item.name}
-                            {/* <motion.div
-                                className={cn('nav-item-progress')}
-                                style={{ scaleX: scrollYProgress }}
-                            /> */}
-                        </motion.li>
-                    ))}
-                </ul>
+            <ul className={cn('nav-list')}>
+                {NAV_LIST.map((item) => (
+                    <motion.li
+                        onClick={() => setActiveTab(item.id)}
+                        className={cn('nav-item', { active: activeTab === item.id })}
+                        key={item.id}
+                    >
+                        {item.name}
+                        {/* <motion.div
+                            className={cn('nav-item-progress')}
+                            style={{ scaleX: scrollYProgress }}
+                        /> */}
+                    </motion.li>
+                ))}
+            </ul>
 
-                <div ref={ref}>
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            // key={activeTab ? activeTab : 'empty'}
-                            initial={{ y: 10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -10, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <Component />
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
+            <div ref={ref}>
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeTab ? activeTab : 'empty'}
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -10, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                    >
+                        <Component />
+                    </motion.div>
+                </AnimatePresence>
             </div>
 
-            {/* <div style={{ height: '2000px' }}></div> */}
+            {/* <div style={{ height: '3000px' }} /> */}
         </Section>
     );
 };
