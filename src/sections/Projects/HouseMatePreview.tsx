@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import styles from './projects.module.scss';
 
 // classnames

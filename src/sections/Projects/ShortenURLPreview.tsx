@@ -3,7 +3,7 @@ import { MdOutlineHome, MdOutlineLogout } from 'react-icons/md';
 import { IoIosLink, IoIosMoon } from 'react-icons/io';
 import { CiSettings } from 'react-icons/ci';
 
-import Button from '@/components/Button';
+import Button from '@/components/button';
 
 import styles from './projects.module.scss';
 

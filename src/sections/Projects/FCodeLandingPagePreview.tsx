@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import fcodeHero from '@/assets/project/f-code.png';
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import Image from '@/components/Image';
 
 import styles from './projects.module.scss';

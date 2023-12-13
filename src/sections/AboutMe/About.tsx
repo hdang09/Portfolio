@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import aboutImg from '@/assets/about/about-img.png';
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import Strong from '@/components/Strong';
 import FadeUp from '@/components/FadeUp';
 import Image from '@/components/Image';
