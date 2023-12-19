@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 import { JSX } from 'preact/compat';
 
 import backgroundDots from '@/assets/components/bg-dots.png';
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import Image from '@/components/Image';
 
 import styles from './card.module.scss';

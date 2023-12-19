@@ -5,7 +5,7 @@ import { IoEarthOutline } from 'react-icons/io5';
 import toast from 'react-hot-toast';
 import { useState } from 'preact/hooks';
 
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import Card from '@/components/Card';
 import HeadlessCard from '@/components/Card/HeadlessCard';
 import Strong from '@/components/Strong';
