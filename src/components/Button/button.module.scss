@@ -11,10 +11,15 @@
     gap: 6px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     opacity: 1;
     color: var(--text-color);
     transition: opacity $transition;
     background-color: transparent;
+
+    &:hover {
+        color: var(--white-color);
+    }
 
     &::before {
         border: 1px solid var(--border-color);
@@ -56,6 +61,22 @@
             justify-content: center;
         }
     }
+
+    &.gradient {
+        color: $white-color;
+        height: 36px;
+        border-radius: 999px;
+        background-image: $gradient-button-color;
+        font-weight: 400;
+    }
+
+    html:not([class='dark']) &.header {
+        background-color: transparent;
+    }
+}
+
+.icon {
+    display: inherit;
 }
 
 html:not([class='dark']) .button {

@@ -11,9 +11,8 @@
     // z-index: 10;
 
     &.thin {
-        @include gt-lg {
-            padding: 0 250px;
-        }
+        max-width: 976px;
+        margin: auto;
     }
 }
 

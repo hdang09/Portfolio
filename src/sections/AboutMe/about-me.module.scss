@@ -30,16 +30,15 @@
         height: 2px;
         background-color: var(--white-color);
         transition: all 0.3s ease-in-out;
+    }
 
-        &:hover {
+    &:hover {
+        color: var(--white-color);
+
+        &::before {
             width: 100%;
             left: 0;
         }
-    }
-
-    &:hover::before {
-        width: 100%;
-        left: 0;
     }
 
     &.active {

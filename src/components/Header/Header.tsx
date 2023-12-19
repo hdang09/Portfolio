@@ -9,6 +9,7 @@ import Container from '@/components/Container';
 import Image from '@/components/Image';
 
 import styles from './header.module.scss';
+import Button from '../Button';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -49,6 +50,9 @@ const Header = () => {
 
     return (
         <header className={cn('header')}>
+            <div className={cn('stage-light', 'stage-background')} />
+            <Image src={stageLight} alt="Stage light" className={cn('stage-light')} />
+
             <Container>
                 <div className={cn('header-inner', scroll && 'header-scrolled')}>
                     <motion.a
@@ -78,31 +82,28 @@ const Header = () => {
                         ))}
 
                         <a className={cn('nav-btn-link')} href="#">
-                            <button
-                                className={cn('action-btn', 'nav-btn')}
+                            <Button
+                                gradient
+                                medium
                                 onClick={downloadResume}
+                                leftIcon={<HiDownload />}
                             >
-                                <HiDownload />
-                                <span>Resume</span>
-                            </button>
+                                Resume
+                            </Button>
                         </a>
                     </motion.nav>
 
-                    <div className={cn('header-btn')}>
-                        <motion.button
-                            className={cn('action-btn')}
-                            onClick={downloadResume}
-                            initial={{ scale: 0, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <HiDownload />
-                            <span>Resume</span>
-                        </motion.button>
-                    </div>
+                    <motion.div
+                        className={cn('header-btn')}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Button medium header onClick={downloadResume} leftIcon={<HiDownload />}>
+                            Resume
+                        </Button>
+                    </motion.div>
                 </div>
-
-                <Image src={stageLight} alt="Stage light" className={cn('stage-light')} />
             </Container>
         </header>
     );

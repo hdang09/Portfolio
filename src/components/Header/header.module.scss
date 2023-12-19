@@ -28,7 +28,7 @@
     }
 
     & nav {
-        width: 592px;
+        width: 590px;
     }
 
     & .nav-btn-link {
@@ -100,19 +100,17 @@ nav {
         background-color: #dfdff50d;
     }
 
+    html:not([class='dark']) & a:hover:not(:last-child),
+    html:not([class='dark']) & a.active {
+        color: var(--white-color);
+    }
+
     .nav-btn-link {
         opacity: 0;
         visibility: hidden;
         transform: translate(-100px);
         position: absolute;
         transition: all $transition;
-    }
-
-    .nav-btn {
-        color: $white-color;
-        height: 36px;
-        border-radius: 999px;
-        background-image: $gradient-button-color;
     }
 
     @include md {
@@ -199,4 +197,9 @@ nav {
     left: 0;
     pointer-events: none;
     z-index: 0;
+
+    html:not([class='dark']) &.stage-background {
+        background: $stage-background;
+        height: 180px;
+    }
 }
