@@ -1,0 +1,22 @@
+html {
+    // Text
+    --text-color: #6b7280;
+    --nav-text-color: var(--text-color);
+    --subheading-color: var(--text-color); /* 0.55 */
+
+    // Base
+    --white-color: #000000;
+    --black-color: #ffffff;
+    --secondary-color: linear-gradient(180deg, var(--text-color) 0%, var(--white-color) 100%);
+    --border-color: rgba(107, 114, 128, 0.08);
+    --background-color: #f4f5f6;
+
+    // Navigation
+    --nav-background-color: #fdfafb;
+
+    // Card
+    --card-background: #ffffff;
+
+    // Icon
+    --github-color: var(--white-color);
+}

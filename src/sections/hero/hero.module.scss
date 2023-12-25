@@ -1,0 +1,195 @@
+@import '@/styles/media-queries.scss';
+@import '@/styles/variables.module.scss';
+
+.hero {
+    margin: 250px 0;
+    text-align: center;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    top: 0;
+
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+
+    @include md {
+        display: none;
+    }
+}
+
+.circles,
+.lights {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    background-color: var(--background-color);
+    transition: background-color 0.2s ease-in;
+
+    &::before {
+        background: linear-gradient(to top, transparent 70%, rgba(255, 255, 255, 0.05) 100%);
+        border-radius: inherit;
+        content: '';
+        inset: 0;
+        -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
+            linear-gradient(var(--white-color) 0 0);
+        mask: linear-gradient(var(--white-color) 0 0) content-box,
+            linear-gradient(var(--white-color) 0 0);
+        mask-composite: xor;
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        padding: 1px;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        left: 0;
+        border-radius: inherit;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, transparent 90%, rgba(255, 255, 255, 0.05) 100%);
+    }
+
+    &.circle-1 {
+        height: 1000px;
+        top: 0;
+    }
+
+    &.circle-2 {
+        height: 820px;
+        top: 164px;
+        z-index: 3;
+    }
+
+    &.circle-3 {
+        height: 720px;
+        top: 296px;
+        z-index: 5;
+    }
+}
+
+@keyframes light {
+    0% {
+        opacity: 1;
+        transform: translate(150px, -25px);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(150px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(150px, -25px);
+    }
+}
+
+.light {
+    width: 716px;
+    height: 558px;
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+    transform: translate(150px, -10px);
+    transition: opacity $transition;
+    animation: light 5s infinite;
+
+    &.light-1 {
+        z-index: 1;
+        left: -20px;
+    }
+
+    &.light-2 {
+        z-index: 4;
+        top: 220px;
+        left: -20px;
+    }
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 4px 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(202, 183, 255, 0.04) 0%,
+        rgba(255, 155, 197, 0.04) 50%,
+        rgba(255, 202, 149, 0.04) 100%
+    );
+    position: relative;
+    box-shadow: 0 -4px 12px #d49eff1f inset;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: box-shadow $transition;
+    cursor: pointer;
+    position: relative;
+
+    & span {
+        background-image: $primary-color;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-weight: 500;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: inherit;
+        background: $primary-color;
+        opacity: 0.1;
+    }
+}
+
+.title {
+    font-size: 7.2rem;
+    line-height: 1.4;
+    background-image: var(--secondary-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    transition: font-size $transition;
+
+    &.main {
+        background-image: $primary-color;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @include lg {
+        font-size: 6.2rem;
+    }
+
+    @include md {
+        font-size: 4.2rem;
+    }
+}
+
+.content {
+    z-index: 1;
+    position: relative;
+}
