@@ -1,8 +1,8 @@
 import classNames from 'classnames/bind';
-import { CSSProperties, JSX, PropsWithChildren } from 'preact/compat';
+import { CSSProperties, JSX, PropsWithChildren } from 'react';
 
-import FadeUp from '@/components/FadeUp';
-import Container from '@/components/Container';
+import FadeUp from '@/components/fade-up';
+import Container from '@/components/container';
 
 import styles from './section.module.scss';
 
@@ -14,7 +14,7 @@ interface SectionProps extends PropsWithChildren {
     heading: JSX.Element;
     center?: boolean;
     thin?: boolean;
-    style?: string | CSSProperties | undefined;
+    style?: CSSProperties | undefined;
 }
 
 const Section = ({ children, id, heading, center, thin, style }: SectionProps) => {

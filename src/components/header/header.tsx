@@ -1,15 +1,18 @@
+'use client';
+
 import classNames from 'classnames/bind';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'preact/hooks';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { HiDownload } from 'react-icons/hi';
 
 import stageLight from '@/assets/components/stage-light.png';
 import { RESUME_URL } from '@/config/constants';
-import Container from '@/components/Container';
-import Image from '@/components/Image';
+import Button from '@/components/button';
+import Container from '@/components/container';
 
 import styles from './header.module.scss';
-import Button from '../Button';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -66,6 +69,7 @@ const Header = () => {
                     </motion.a>
 
                     <motion.nav
+                        className={cn('nav')}
                         initial={{ width: '48px', height: '48px' }}
                         animate={{ width: 'revert-layer', display: 'revert-layer' }}
                     >
@@ -81,7 +85,7 @@ const Header = () => {
                             </motion.a>
                         ))}
 
-                        <a className={cn('nav-btn-link')} href="#">
+                        <Link className={cn('nav-btn-link')} href="#">
                             <Button
                                 gradient
                                 medium
@@ -90,7 +94,7 @@ const Header = () => {
                             >
                                 Resume
                             </Button>
-                        </a>
+                        </Link>
                     </motion.nav>
 
                     <motion.div

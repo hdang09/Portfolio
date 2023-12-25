@@ -1,3 +1,6 @@
+'use client';
+
+import Image from 'next/image';
 import {
     SiNextdotjs,
     SiSpring,
@@ -17,19 +20,19 @@ import { AiOutlineBulb } from 'react-icons/ai';
 import { MdMovie } from 'react-icons/md';
 import { RiHotelFill } from 'react-icons/ri';
 
-import Card from '@/components/Card';
-import Section from '@/components/Section';
-import Strong from '@/components/Strong';
+import Card from '@/components/card';
+import Section from '@/components/section';
+import Strong from '@/components/strong';
 
-import HousemateSVG from '@/assets/svg/housemate.svg?react';
-import FcodeSVG from '@/assets/svg/f-code.svg?react';
+import HousemateSVG from '@/assets/svg/housemate.svg';
+import FcodeSVG from '@/assets/svg/f-code.svg';
 
-import HouseMatePreview from './HouseMatePreview';
-import ShortenURLPreview from './ShortenURLPreview';
-import IQChallengePreview from './IQChallengePreview';
-import NetClickPreview from './NetClickPreview';
-import FCodeLandingPagePreview from './FCodeLandingPagePreview';
-import HotelReservationPreview from './HotelReservationPreview';
+import HouseMatePreview from './housemate-preview';
+import ShortenURLPreview from './shorten-url-preview';
+import IQChallengePreview from './iq-challenge-preview';
+import NetClickPreview from './netclick-preview';
+import FCodeLandingPagePreview from './fcode-landing-page-preview';
+import HotelReservationPreview from './hotel-reservation-preview';
 
 // Constants
 const PROJECTS = [
@@ -38,15 +41,15 @@ const PROJECTS = [
         description: 'A web application that provides service for student apartments',
         url: 'https://housemate.site',
         techstacks: [SiReact, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
-        preview: <HouseMatePreview />,
-        icon: <HousemateSVG />,
+        preview: HouseMatePreview,
+        icon: <Image src={HousemateSVG} alt="HouseMate Icon" />,
     },
     {
         title: 'Shorten URL',
         description: 'An URL Shortener transform long, ugly links into nice, short URLs',
         url: 'https://shorten.hdang09.tech',
         techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql],
-        preview: <ShortenURLPreview />,
+        preview: ShortenURLPreview,
         icon: <IoIosLink />,
     },
     {
@@ -54,7 +57,7 @@ const PROJECTS = [
         description: 'A movie web application',
         url: 'https://netclick.hdang09.tech',
         techstacks: [FaJava, SiTailwindcss, SiMicrosoftsqlserver],
-        preview: <NetClickPreview />,
+        preview: NetClickPreview,
         icon: <MdMovie />,
     },
     {
@@ -62,7 +65,7 @@ const PROJECTS = [
         description: 'A quiz game for the orientation at FPT University HCM.',
         url: 'https://iq.hdang09.tech',
         techstacks: [SiNextdotjs, BiLogoTypescript, FaSass, SiSpring, GrMysql],
-        preview: <IQChallengePreview />,
+        preview: IQChallengePreview,
         icon: <AiOutlineBulb />,
     },
     {
@@ -70,15 +73,15 @@ const PROJECTS = [
         description: 'A landing page for recruiting members into F-Code Club.',
         url: 'https://f-code.tech',
         techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql, SiDocker],
-        preview: <FCodeLandingPagePreview />,
-        icon: <FcodeSVG />,
+        preview: FCodeLandingPagePreview,
+        icon: <Image src={FcodeSVG} alt="F-Code Icon" />,
     },
     {
         title: 'Hotel Reservation',
         description: 'A project to book rooms for receptionist.',
         url: 'https://hotel.hdang09.tech',
         techstacks: [SiReact, SiTailwindcss, SiNodedotjs, SiExpress],
-        preview: <HotelReservationPreview />,
+        preview: HotelReservationPreview,
         icon: <RiHotelFill />,
     },
 ];

@@ -31,7 +31,7 @@
         width: 590px;
     }
 
-    & .nav-btn-link {
+    header & .nav-btn-link {
         opacity: 1;
         visibility: visible;
         transform: translate(0);
@@ -64,7 +64,7 @@
     font-weight: 700;
 }
 
-nav {
+.nav {
     justify-content: center;
     border-radius: 999px;
     border: 1px solid rgba(224, 231, 255, 0.251);

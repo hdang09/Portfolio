@@ -1,18 +1,19 @@
-import { h } from 'preact';
+'use client';
+
 import classNames from 'classnames/bind';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { IoEarthOutline } from 'react-icons/io5';
 import toast from 'react-hot-toast';
-import { useState } from 'preact/hooks';
+import { useState } from 'react';
 
 import Button from '@/components/button';
-import Card from '@/components/Card';
-import HeadlessCard from '@/components/Card/HeadlessCard';
-import Strong from '@/components/Strong';
-import Section from '@/components/Section';
+import Card from '@/components/card';
+import HeadlessCard from '@/components/card/headless-card';
+import Strong from '@/components/strong';
+import Section from '@/components/section';
 
 import styles from './contact.module.scss';
-import React from 'preact/compat';
+import React from 'react';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -56,7 +57,7 @@ const Contact = () => {
         message: '',
     });
 
-    const validate = (event: h.JSX.TargetedMouseEvent<HTMLButtonElement>) => {
+    const validate = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
 
         if (form.firstName.trim().length < 2) {
@@ -153,7 +154,7 @@ const Contact = () => {
                         />
                         <textarea
                             name="message"
-                            className={cn('input')}
+                            className={cn('input', 'textarea')}
                             placeholder="Message"
                             value={form.message}
                             onChange={(e: any) => setForm({ ...form, message: e.target.value })}

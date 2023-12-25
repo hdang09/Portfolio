@@ -1,10 +1,12 @@
+'use client';
+
 import classNames from 'classnames/bind';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import light from '@/assets/components/light.png';
-import Container from '@/components/Container';
-import FadeUp from '@/components/FadeUp';
-import Image from '@/components/Image';
+import Container from '@/components/container';
+import FadeUp from '@/components/fade-up';
 
 import styles from './hero.module.scss';
 
