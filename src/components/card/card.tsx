@@ -1,22 +1,21 @@
+import classNames from 'classnames/bind';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { IconType } from 'react-icons';
 import { FiExternalLink } from 'react-icons/fi';
-import classNames from 'classnames/bind';
-import { JSX } from 'react';
 
 import backgroundDots from '@/assets/components/bg-dots.png';
 import Button from '@/components/button';
 
 import styles from './card.module.scss';
-import Image from 'next/image';
 
 const cn = classNames.bind(styles);
 
 interface CardProps {
+    icon: JSX.Element;
     title: string;
     description: string;
     url: string;
-    icon: any;
     preview: () => JSX.Element;
     techstacks: IconType[];
 }
@@ -60,10 +59,10 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
 
             <div className={cn('card-footer')}>
                 <div className={cn('techstacks')}>
-                    {techstacks.map((tech, index) => {
+                    {techstacks.map((tech, idx) => {
                         const Tech = tech;
 
-                        return <Tech key={index} />;
+                        return <Tech key={idx} />;
                     })}
                 </div>
 

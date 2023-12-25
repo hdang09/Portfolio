@@ -44,7 +44,7 @@ const IQChallengePreview = () => {
                                 y2="142"
                                 gradientUnits="userSpaceOnUse"
                             >
-                                <stop stop-color="#e2e8ff8c" />
+                                <stop stopColor="#e2e8ff8c" />
                             </linearGradient>
                         </defs>
                     </svg>

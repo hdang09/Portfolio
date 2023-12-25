@@ -13,10 +13,14 @@ const cn = classNames.bind(styles);
 const FloatButton = () => {
     // Dark mode
     const [isDark, setIsDark] = useState<boolean>(
-        JSON.parse(localStorage.getItem('is-dark') || 'true'),
+        typeof window !== 'undefined'
+            ? JSON.parse(localStorage.getItem('is-dark') || 'true')
+            : true,
     );
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+
         if (JSON.parse(localStorage.getItem('is-dark') || 'true')) {
             document.documentElement.classList.toggle('dark');
             setIsDark(true);
@@ -24,6 +28,8 @@ const FloatButton = () => {
     }, []);
 
     const toggleTheme = () => {
+        if (typeof window === 'undefined') return;
+
         document.documentElement.classList.toggle('dark');
         localStorage.setItem('is-dark', isDark ? 'false' : 'true');
         setIsDark((prev) => !prev);

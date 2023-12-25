@@ -1,8 +1,8 @@
 import classNames from 'classnames/bind';
 import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from 'react-icons/bi';
 
-import Strong from '@/components/strong';
-import Container from '@/components/container';
+import Strong from '@/components/Strong';
+import Container from '@/components/Container';
 
 import styles from './footer.module.scss';
 
