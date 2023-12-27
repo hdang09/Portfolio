@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     icons,
     manifest: BASE_URL + '/favicon/manifest.json',
     applicationName: 'Tran Hai Dang Portfolio',
+    metadataBase: new URL(BASE_URL),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

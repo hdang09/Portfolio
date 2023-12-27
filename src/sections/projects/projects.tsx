@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import {
     SiNextdotjs,
     SiSpring,
@@ -20,12 +19,12 @@ import { AiOutlineBulb } from 'react-icons/ai';
 import { MdMovie } from 'react-icons/md';
 import { RiHotelFill } from 'react-icons/ri';
 
+import HouseMateIcon from '@/assets/icon/housemate';
+import FCodeIcon from '@/assets/icon/f-code';
+
 import Card from '@/components/card';
 import Section from '@/components/section';
 import Strong from '@/components/strong';
-
-import HousemateSVG from '@/assets/svg/housemate.svg';
-import FcodeSVG from '@/assets/svg/f-code.svg';
 
 import HouseMatePreview from './housemate-preview';
 import ShortenURLPreview from './shorten-url-preview';
@@ -42,7 +41,7 @@ const PROJECTS = [
         url: 'https://housemate.site',
         techstacks: [SiReact, BiLogoTypescript, SiStyledcomponents, SiSpring, GrMysql],
         preview: HouseMatePreview,
-        icon: <Image src={HousemateSVG} alt="HouseMate Icon" />,
+        icon: <HouseMateIcon />,
     },
     {
         title: 'Shorten URL',
@@ -74,7 +73,7 @@ const PROJECTS = [
         url: 'https://f-code.tech',
         techstacks: [SiReact, SiStyledcomponents, SiSpring, GrMysql, SiDocker],
         preview: FCodeLandingPagePreview,
-        icon: <Image src={FcodeSVG} alt="F-Code Icon" />,
+        icon: <FCodeIcon />,
     },
     {
         title: 'Hotel Reservation',

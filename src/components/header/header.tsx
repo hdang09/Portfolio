@@ -89,6 +89,7 @@ const Header = () => {
                             <Button
                                 gradient
                                 medium
+                                rounded
                                 onClick={downloadResume}
                                 leftIcon={<HiDownload />}
                             >

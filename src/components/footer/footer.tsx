@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
-import { BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin } from 'react-icons/bi';
+import Link from 'next/link';
+import { BiLogoGmail, BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi';
 
 import Strong from '@/components/strong';
 import Container from '@/components/container';
@@ -8,32 +9,33 @@ import styles from './footer.module.scss';
 
 const cn = classNames.bind(styles);
 
+// Constants
+const NAV_BAR = [
+    { name: 'Home', href: '#' },
+    { name: 'About me', href: '#about-me' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
+];
+
+const SOCIAL_MEDIA = [
+    {
+        name: 'Email',
+        url: 'mailto:hdang09.tech',
+        icon: <BiLogoGmail size="30" />,
+    },
+    {
+        name: 'GitHub',
+        url: 'https://github.com/hdang09',
+        icon: <BiLogoGithub size="30" />,
+    },
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/hdang09/',
+        icon: <BiLogoLinkedin size="30" />,
+    },
+];
+
 const Footer = () => {
-    const NAV_BAR = [
-        { name: 'Home', href: '#' },
-        { name: 'About me', href: '#about-me' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Contact', href: '#contact' },
-    ];
-
-    const SOCIAL_MEDIA = [
-        {
-            name: 'Facebook',
-            url: 'https://www.facebook.com/hdang.09',
-            icon: <BiLogoFacebook color="#385c8e" size="30" />,
-        },
-        {
-            name: 'Instagram',
-            url: 'https://www.instagram.com/h.dang09/',
-            icon: <BiLogoInstagram color="#ff8e40" size="30" />,
-        },
-        {
-            name: 'GitHub',
-            url: 'https://www.linkedin.com/in/hdang09/',
-            icon: <BiLogoLinkedin color="#007aaa" size="30" />,
-        },
-    ];
-
     return (
         <footer className={cn('footer')}>
             <Container>
@@ -43,7 +45,7 @@ const Footer = () => {
                     <ul className={cn('nav-bar')}>
                         {NAV_BAR.map((item) => (
                             <li key={item.name}>
-                                <a href={item.href}>{item.name}</a>
+                                <Link href={item.href}>{item.name}</Link>
                             </li>
                         ))}
                     </ul>
@@ -51,9 +53,9 @@ const Footer = () => {
                     <ul className={cn('social-media')}>
                         {SOCIAL_MEDIA.map((item) => (
                             <li className={cn('sm-item')} key={item.name}>
-                                <a href={item.url} aria-label={item.name}>
+                                <Link target="_blank" href={item.url} aria-label={item.name}>
                                     {item.icon}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -63,9 +65,9 @@ const Footer = () => {
             <div className={cn('copyright')}>
                 <p className={cn('text')}>
                     Copyright © 2023 <Strong>hdang09</Strong>. Inspired by{' '}
-                    <a href="https://dribbble.com" target="_blank">
-                        Dribbble
-                    </a>
+                    <Link href="https://dribbble.com" target="_blank">
+                        <strong>Dribbble</strong>
+                    </Link>
                 </p>
             </div>
         </footer>

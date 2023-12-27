@@ -39,7 +39,9 @@ const FCodeLandingPagePreview = () => {
     return (
         <div className={cn('netclick-preview')}>
             <header className={cn('netclick-header')}>
-                <Link href={URL}>F-Code</Link>
+                <Link target="_blank" href={URL}>
+                    F-Code
+                </Link>
 
                 <ul>
                     {NAV_LINKS.map((link) => (

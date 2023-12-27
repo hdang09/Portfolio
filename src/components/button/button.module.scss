@@ -1,6 +1,12 @@
 @import '@/styles/media-queries.scss';
 @import '@/styles/variables.module.scss';
 
+.wrapper {
+    & + & {
+        margin-left: 16px;
+    }
+}
+
 .button {
     width: inherit;
     font-size: 1rem;
@@ -16,6 +22,7 @@
     color: var(--text-color);
     transition: opacity $transition;
     background-color: transparent;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     &:hover {
         color: var(--white-color);
@@ -64,10 +71,13 @@
 
     &.gradient {
         color: $white-color;
-        height: 36px;
-        border-radius: 999px;
         background-image: $gradient-button-color;
         font-weight: 400;
+    }
+
+    &.rounded {
+        border-radius: 999px;
+        height: 36px;
     }
 
     html:not([class='dark']) &.header {

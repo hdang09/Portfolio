@@ -9,6 +9,7 @@ import Container from '@/components/container';
 import FadeUp from '@/components/fade-up';
 
 import styles from './hero.module.scss';
+import Button from '@/components/button';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -56,6 +57,25 @@ const Hero = () => {
                             <h1 className={cn('title', 'main')}>Full-stack Developer</h1>
                         </FadeUp>
                     </div>
+
+                    <FadeUp delay={0.5}>
+                        <p className={cn('description')}>
+                            Build client, server, design, deployments, and more.
+                        </p>
+                    </FadeUp>
+
+                    <motion.div
+                        initial={{ y: '-20px', opacity: 0 }}
+                        animate={{ y: '0', opacity: 1 }}
+                        transition={{ delay: 1.25, duration: 0.5 }}
+                    >
+                        <Button href="#projects" large>
+                            View projects
+                        </Button>
+                        <Button href="#contact" large gradient>
+                            Contact me
+                        </Button>
+                    </motion.div>
                 </div>
             </Container>
         </section>

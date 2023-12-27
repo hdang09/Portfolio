@@ -1,6 +1,7 @@
 'use client';
 
 import classNames from 'classnames/bind';
+import Link from 'next/link';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { IoEarthOutline } from 'react-icons/io5';
 import toast from 'react-hot-toast';
@@ -121,9 +122,7 @@ const Contact = () => {
                                 className={cn('input')}
                                 placeholder="Firstname"
                                 value={form.firstName}
-                                onChange={(e: any) =>
-                                    setForm({ ...form, firstName: e.target.value })
-                                }
+                                onChange={(e) => setForm({ ...form, firstName: e.target.value })}
                             />
                             <input
                                 type="text"
@@ -131,9 +130,7 @@ const Contact = () => {
                                 className={cn('input')}
                                 placeholder="Lastname"
                                 value={form.lastName}
-                                onChange={(e: any) =>
-                                    setForm({ ...form, lastName: e.target.value })
-                                }
+                                onChange={(e) => setForm({ ...form, lastName: e.target.value })}
                             />
                         </div>
                         <input
@@ -142,7 +139,7 @@ const Contact = () => {
                             className={cn('input')}
                             placeholder="Email"
                             value={form.email}
-                            onChange={(e: any) => setForm({ ...form, email: e.target.value })}
+                            onChange={(e) => setForm({ ...form, email: e.target.value })}
                         />
                         <input
                             type="text"
@@ -150,14 +147,14 @@ const Contact = () => {
                             className={cn('input')}
                             placeholder="Subject"
                             value={form.subject}
-                            onChange={(e: any) => setForm({ ...form, subject: e.target.value })}
+                            onChange={(e) => setForm({ ...form, subject: e.target.value })}
                         />
                         <textarea
                             name="message"
                             className={cn('input', 'textarea')}
                             placeholder="Message"
                             value={form.message}
-                            onChange={(e: any) => setForm({ ...form, message: e.target.value })}
+                            onChange={(e) => setForm({ ...form, message: e.target.value })}
                         ></textarea>
 
                         <div className={cn('btn-wrapper')}>
@@ -171,9 +168,9 @@ const Contact = () => {
                 <div className={cn('cards')}>
                     {CARDS.map((card) => (
                         <HeadlessCard key={card.title}>
-                            <a href={card.href} className={cn('title')} target="_blank">
+                            <Link href={card.href} className={cn('title')} target="_blank">
                                 {card.title}
-                            </a>
+                            </Link>
 
                             <div className={cn('info')}>
                                 <div className={cn('icon')}>{card.icon}</div>

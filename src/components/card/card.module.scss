@@ -38,11 +38,13 @@
     svg {
         width: var(--size);
         height: var(--size);
+        object-fit: contain;
     }
 
     img {
         width: var(--size);
         height: var(--size);
+        object-fit: contain;
     }
 }
 

@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -38,12 +39,12 @@ const Card = ({ icon, title, description, url, preview, techstacks }: CardProps)
             <Image src={backgroundDots} alt="Background dots" className={cn('bg-dots')} />
 
             <div className={cn('card-heading')}>
-                <a href={url} target="_blank" aria-label={title} className={cn('icon')}>
+                <Link href={url} target="_blank" aria-label={title} className={cn('icon')}>
                     {icon}
-                </a>
-                <a href={url} target="_blank" className={cn('card-title')}>
+                </Link>
+                <Link href={url} target="_blank" className={cn('card-title')}>
                     {title}
-                </a>
+                </Link>
                 <p className={cn('description')}>{description}</p>
             </div>
 

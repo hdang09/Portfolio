@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import Link from 'next/link';
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 import styles from './about-me.module.scss';
@@ -35,10 +36,15 @@ const SocialMedia = () => {
         <div className={cn('tab')}>
             <div className={cn('col-3')}>
                 {SOCIAL_MEDIA.map((item) => (
-                    <a href={item.href} key={item.name} className={cn('sm-group')}>
+                    <Link
+                        href={item.href}
+                        key={item.name}
+                        className={cn('sm-group')}
+                        target="_blank"
+                    >
                         <div className={cn('icon', item.classname)}>{item.icon}</div>
                         <span className={cn('name')}>{item.name}</span>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>

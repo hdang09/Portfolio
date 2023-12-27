@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import Link from 'next/link';
 import { MdOutlineHome, MdOutlineLogout } from 'react-icons/md';
 import { IoIosLink, IoIosMoon } from 'react-icons/io';
 import { CiSettings } from 'react-icons/ci';
@@ -22,29 +23,29 @@ const ShortenURLPreview = () => {
             <div className={cn('shorten-nav')}>
                 <ul>
                     <li>
-                        <a target="_blank" href={URL} aria-label="Home">
+                        <Link target="_blank" href={URL} aria-label="Home">
                             <MdOutlineHome size="12" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a target="_blank" href={URL} aria-label="LInks">
+                        <Link target="_blank" href={URL} aria-label="LInks">
                             <IoIosLink size="12" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a target="_blank" href={URL} aria-label="Settings">
+                        <Link target="_blank" href={URL} aria-label="Settings">
                             <CiSettings size="14" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a target="_blank" href={URL} aria-label="Theme">
+                        <Link target="_blank" href={URL} aria-label="Theme">
                             <IoIosMoon size="12" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a target="_blank" href={URL} aria-label="Logout">
+                        <Link target="_blank" href={URL} aria-label="Logout">
                             <MdOutlineLogout size="12" />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
