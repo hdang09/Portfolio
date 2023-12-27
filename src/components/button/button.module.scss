@@ -4,6 +4,12 @@
 .wrapper {
     & + & {
         margin-left: 16px;
+
+        @include md {
+            display: block;
+            margin-top: 16px;
+            margin-left: 0;
+        }
     }
 }
 

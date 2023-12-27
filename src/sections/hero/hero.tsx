@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import light from '@/assets/components/light.png';
+import Button from '@/components/button';
 import Container from '@/components/container';
 import FadeUp from '@/components/fade-up';
 
 import styles from './hero.module.scss';
-import Button from '@/components/button';
 
 // classnames
 const cn = classNames.bind(styles);
@@ -69,10 +69,10 @@ const Hero = () => {
                         animate={{ y: '0', opacity: 1 }}
                         transition={{ delay: 1.25, duration: 0.5 }}
                     >
-                        <Button href="#projects" large>
+                        <Button href="#projects" large responsive>
                             View projects
                         </Button>
-                        <Button href="#contact" large gradient>
+                        <Button href="#contact" gradient large responsive>
                             Contact me
                         </Button>
                     </motion.div>

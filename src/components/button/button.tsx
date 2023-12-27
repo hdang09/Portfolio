@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './button.module.scss';
-import { Fragment, MouseEventHandler, PropsWithChildren } from 'react';
+import { MouseEventHandler, PropsWithChildren } from 'react';
 import Link from 'next/link';
 
 const cn = classNames.bind(styles);
