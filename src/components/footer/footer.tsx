@@ -21,17 +21,17 @@ const SOCIAL_MEDIA = [
     {
         name: 'Email',
         url: 'mailto:hdang09.tech',
-        icon: <BiLogoGmail size="30" />,
+        icon: BiLogoGmail,
     },
     {
         name: 'GitHub',
         url: 'https://github.com/hdang09',
-        icon: <BiLogoGithub size="30" />,
+        icon: BiLogoGithub,
     },
     {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/hdang09/',
-        icon: <BiLogoLinkedin size="30" />,
+        icon: BiLogoLinkedin,
     },
 ];
 
@@ -51,20 +51,24 @@ const Footer = () => {
                     </ul>
 
                     <ul className={cn('social-media')}>
-                        {SOCIAL_MEDIA.map((item) => (
-                            <li className={cn('sm-item')} key={item.name}>
-                                <Link target="_blank" href={item.url} aria-label={item.name}>
-                                    {item.icon}
-                                </Link>
-                            </li>
-                        ))}
+                        {SOCIAL_MEDIA.map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <li className={cn('sm-item')} key={item.name}>
+                                    <Link target="_blank" href={item.url} aria-label={item.name}>
+                                        <Icon size="30" />
+                                    </Link>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             </Container>
 
             <div className={cn('copyright')}>
                 <p className={cn('text')}>
-                    Copyright © 2023 <Strong>hdang09</Strong>. Inspired by{' '}
+                    Copyright © 2024 <Strong>hdang09</Strong>. Inspired by{' '}
                     <Link href="https://dribbble.com" target="_blank">
                         <strong>Dribbble</strong>
                     </Link>
