@@ -9,7 +9,7 @@ const FCodeIcon = () => {
             y="0px"
             width="100%"
             viewBox="0 0 1598 2047"
-            enable-background="new 0 0 1598 2047"
+            enableBackground="new 0 0 1598 2047"
             xmlSpace="preserve"
         >
             <path
